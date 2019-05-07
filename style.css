@@ -17,7 +17,7 @@ html {
 sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    overflow-x: hidden;
+    /*    overflow-x: hidden;*/
 }
 
 .clearfix::after {
@@ -25,6 +25,7 @@ sans-serif;*/
     display: block;
     clear: both;
 }
+
 
 header div.banner {
     position: relative;
@@ -89,7 +90,7 @@ header div.welcome h2 {
 /*main*/
 
 main h1 {
-    margin: 10px 5px 5px 5px;
+    margin: 30px 5px 5px 5px;
     padding-bottom: 5px;
     font-size: 3em;
     font-weight: 400;
@@ -98,7 +99,7 @@ main h1 {
 }
 
 h3 {
-    margin: 5px 0 5px;
+    margin: 10px 0 5px;
     padding-bottom: 5px;
     padding-top: 5px;
     font-size: 1.6em;
@@ -113,10 +114,11 @@ h3 {
 }
 
 .wrapper p {
+    margin: 0 10px 15px;
     padding: 5px 5px;
     font-size: 1.2em;
     color: #999;
-    line-height: 1.4em;
+    line-height: 1.5em;
     font-weight: 400;
     text-align: left;
     word-wrap: break-word;
@@ -129,6 +131,8 @@ h3 {
     margin-right: auto;
     width: 100%;
     padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
     max-width: 100%;
     height: auto;
 }
@@ -141,13 +145,13 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     height: 20vh;
-
+    text-align: center;
 }
 
 .bg h3 {
     position: absolute;
     font-weight: 600;
-    text-align: center;
+    /*    text-align: center;*/
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -175,7 +179,7 @@ h3 {
 }
 
 .bg button:nth-last-child(1) {
-    left: 51%;
+    left: 52%;
     background-color: #213e5b;
     border-color: #213e5b;
 }
@@ -220,13 +224,13 @@ main h2 {
 }
 
 .services .wrapper {
-    margin: 20px 10px;
+    margin: 5px 10px;
 }
 
 .service {
     /*float: left;*/
     /*    width: 33%;*/
-    padding: 30px;
+    padding: 25px;
     text-align: center;
 
 }
@@ -311,7 +315,7 @@ main h2 {
 
 .slogan .fixed-bg {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     margin: 0 auto;
     background-image: url(images/adult-3327336_1280.jpg);
     background-repeat: no-repeat;
@@ -332,197 +336,342 @@ main h2 {
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
-/*.credo {*/
-/*
-height: 90vh;
-background-image: url(images/accountant-1238598_1280.jpg);
-background-repeat: no-repeat;
-background-position: center bottom;
-background-size: cover;
-background-attachment: fixed;
-*/
+.credo {
+    height: 80vh;
+    background-image: url(images/accountant-1238598_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom top;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-/*.credo .row {*/
-/*
-position: relative;
-top: 40px;
-height: 90vh;
-width: 80%;
-margin-left: auto;
-margin-right: auto;
-padding: 20px 40px;
-*/
+.credo .row {
+    position: relative;
+    /*    top: 20px;*/
+    height: 80vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 40px;
 }
 
-/*.row > * {*/
-/*position: absolute;*/
+.row > * {
+    position: absolute;
 }
 
-/*.credo .content {*/
-/*
-top: 0;
-right: 0;
-width: 40%;
-padding: 10px;
-*/
+.credo .content {
+    top: 40px;
+    right: 0;
+    padding: 10px;
 }
 
-/*.credo p {*/
-/*
-font-size: 2.6em;
-color: #fff;
-line-height: 1.8em;
-font-weight: 400;
-text-align: left;
-word-wrap: break-word;
-hyphens: auto;
-*/
-/*    z-index: 2;*/
+.credo p {
+    font-size: 1.8em;
+    color: #fff;
+    line-height: 1.8em;
+    font-weight: 400;
+    text-align: left;
+    word-wrap: break-word;
+    hyphens: auto;
+    /*    z-index: 2;*/
 }
 
-/*
 .credo .author {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 .credo img {
-    display: block;
-    padding: 20px 30px;
+    visibility: hidden;
+    top: 10px;
+    left: 0;
     max-width: 100%;
+}
+
+.credo .background {
+    height: 80vh;
+    background-color: rgba(0, 60, 50, .9);
+}
+
+
+
+.recom {
+    position: relative;
+    height: 70vh;
+    background-image: url(images/accountant-1238598_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.companies h1 {
+    margin: 0 auto;
+    padding: 60px 30px 30px;
+    color: #fff;
+    text-align: center;
+    /*    background-color: rgba(0, 60, 50, .9);*/
+}
+
+.companies span {
+    float: left;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.recom .background {
+    height: 70vh;
+    background-color: rgba(0, 60, 50, .9);
+}
+
+.second-toggle h2 {
+    line-height: 11vh;
+}
+
+.second-toggle .toggle {
+    position: relative;
+    height: 22vh;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #fff;
+    color: #182a36;
+    /*        cursor: pointer;*/
+}
+
+.second-toggle #triangle-down {
+    position: absolute;
+    border-top: 26px solid #fff;
+}
+
+.contact {
+    background-color: #0E1C2C;
+}
+
+.contact .wrapper-contact {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 30px 5px;
+    text-align: center;
+    /*    width: 90%;*/
+}
+
+
+.contact .wrapper-contact button {
+    display: inline-block;
+    width: 90%;
+    background-color: transparent;
+    margin: 10px 5px;
+    padding: 20px 5px 20px 10px;
+    border: 1px solid rgb(153, 153, 153);
+    color: rgb(153, 153, 153);
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.contact .wrapper-contact i {
+    padding-right: 10px;
+}
+
+.contact .wrapper-contact button:hover {
+    background-color: rgb(0, 129, 109);
+    border: 1px solid rgb(0, 129, 109);
+    opacity: 1;
+}
+
+footer {
+    background-color: #0E1C2C;
+    color: rgba(153, 153, 153, 0.8);
+    text-align: center;
+    line-height: 20px;
+}
+
+
+@media(min-width:410px) {
+
+    header div > strong {
+        font-size: 1.9em;
+    }
+
+    header div > strong::first-letter {
+        font-size: 2.4em;
+    }
+
+    header div.welcome {
+        bottom: 8vh;
+    }
+
+    header div.welcome h1 {
+        font-size: 3em;
+        padding-bottom: .7em;
+    }
+
+    header div.welcome h2 {
+        font-size: 1.8em;
+    }
+
+    main h1 {
+        font-size: 3.4em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    .wrapper p {
+        padding: 10px 10px;
+        font-size: 1.8em;
+        line-height: 1.8em;
+    }
+
+    main h2 {
+        font-size: 2.8em;
+    }
+
+    #triangle-down {
+        left: 43%;
+    }
+
+    .service i {
+        font-size: 5em;
+    }
+
+    .service h4 {
+        font-size: 1.8em;
+    }
+
+    .service p {
+        font-size: 1.6em;
+        line-height: 25px;
+    }
+
+    .service ul li {
+        font-size: 1.5em;
+        line-height: 53px;
+    }
+
+    .credo p {
+        font-size: 1.9em;
+        color: #fff;
+        line-height: 1.8em;
+        font-weight: 400;
+        text-align: left;
+        word-wrap: break-word;
+        hyphens: auto;
+        /*    z-index: 2;*/
+    }
+
+    .credo .author {
+        font-size: 1.5em;
+    }
+
+    .companies span {
+        font-size: 1.5em;
+    }
+
+    .second-toggle h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contact .wrapper-contact button {
+        font-size: 1.6em;
+        line-height: 24px;
+    }
+
+    footer {
+        font-size: 1.4em;
+    }
+
+}
+
+@media(min-width:640px) {
+
+    .wrapper p {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .who img {
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .bg {
+        /*        position: relative;*/
+        /*        margin-top: 25px;*/
+
+        /*        margin-bottom: 20px;*/
+        /*
+        margin-left: auto;
+        margin-right: auto;
 */
-/*responsive image*/
-/*    height: auto;*/
-/*responsive image*/
-}
 
-/*.credo .background {*/
-/*
-height: 90vh;
-background-color: rgba(0, 60, 50, .9);
-}
-*/
+        height: 35vh;
+        /*        text-align: center;*/
+    }
+
+    .bg h3 {
+        width: 97%;
+    }
 
 
+    #triangle-down {
+        left: 46%;
+    }
 
-/*.recom {*/
-/*
-position: relative;
-height: 60vh;
-background-image: url(images/accountant-1238598_1280.jpg);
-background-repeat: no-repeat;
-background-position: center top;
-background-size: cover;
-background-attachment: fixed;
-}
-*/
+    .credo p {
+        font-size: 1.7em;
+        text-align: center;
+    }
 
-/*.companies h1 {*/
-/*
-margin: 0 auto;
-padding: 60px 30px;
-color: #fff;
-text-align: center;
-}
-*/
+    .credo .author {
+        font-size: 1.4em;
+    }
 
-/*.companies span {*/
-/*
-float: left;
-padding: 20px 50px;
-color: #fff;
-font-size: 1.8em;
-}
-*/
+    .recom {
+        height: 85vh;
+    }
 
-/*.recom .background {*/
-/*
-height: 60vh;
-background-color: rgba(0, 60, 50, .9);
-}
-*/
 
-/*.second-toggle .toggle {*/
-/*
-position: relative;
-background-color: #fff;
-color: #182a36;
-*/
-/*        cursor: pointer;*/
-}
+    .companies h1 {
+        padding: 30px 30px 20px;
+    }
 
-/*.second-toggle #triangle-down {*/
-/*
-position: absolute;
-border-top: 26px solid #fff;
-*/
-}
+    .companies span {
+        font-size: 1.2em;
+    }
 
-/*.contact {*/
-/*
-height: 40vh;
-background-color: #0E1C2C;
-*/
-}
+    .recom .background {
+        height: 85vh;
+    }
 
-/*.contact .wrapper-contact {*/
-/*
-max-width: 1024px;
-margin: 0 auto;
-padding: 30px 20px;
-*/
+    .second-toggle h2 {
+        line-height: 22vh;
+    }
+
+    .contact .wrapper-contact button {
+        font-size: 1.2em;
+        line-height: 18px;
+    }
+
+    footer {
+        font-size: 1.2em;
+    }
+
+
 
 }
-
-
-/*.contact .wrapper-contact button {*/
-/*
-display: inline-block;
-width: 29%;
-background-color: transparent;
-margin: 50px 20px;
-padding: 10px 30px;
-border: 1px solid #fff;
-color: #fff;
-font-size: 1.5em;
-text-transform: uppercase;
-letter-spacing: 1px;
-line-height: 40px;
-opacity: 0.8;
-cursor: pointer;
-}
-*/
-
-/*.contact .wrapper-contact i {*/
-/*padding-right: 10px;*/
-}
-
-/*.contact .wrapper-contact button:hover {*/
-/*
-background-color: rgb(0, 129, 109);
-border: 1px solid rgb(0, 129, 109);
-opacity: 1;
-}
-*/
-
-/* NOTE: contact form trzeba zrobić po kursie zaawansowanym*/
-
-/*.contact-form {*/
-/*visibility: hidden;*/
-}
-
-
-/*footer {*/
-/*
-background-color: #0E1C2C;
-color: rgba(255, 255, 255, 0.8);
-text-align: center;
-line-height: 20px;
-}
-*/
 
 /*
-@media (min-width 1024px) {
+@media(min-width:1024px) {
     header div.banner {
         position: relative;
         height: 100vh;
@@ -783,18 +932,8 @@ sans-serif;*/
 */
 /*
 
-    #triangle-down {
-        position: absolute;
-        left: 47.5%;
-        margin: 0 auto 0;
-        opacity: 1;
-        width: 0px;
-        height: 0px;
-        border-left: 27px solid transparent;
-        border-right: 27px solid transparent;
-        border-top: 26px solid #0e1c2c;
+   
 
-    }
 */
 
 /*NOTE:może się przyda w animacji*/
@@ -979,6 +1118,7 @@ sans-serif;*/
     }
 
     .credo img {
+visibility:hidden;
         display: block;
         padding: 20px 30px;
         max-width: 100%;
@@ -1030,7 +1170,7 @@ sans-serif;*/
         position: relative;
         background-color: #fff;
         color: #182a36;
-*/
+        */
 /*        cursor: pointer;*/
 }
 
@@ -1095,5 +1235,3 @@ sans-serif;*/
         line-height: 20px;
     }
 */
-
-}
