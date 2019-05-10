@@ -412,7 +412,7 @@ main h2 {
 }
 
 .companies span {
-    /*    float: left;*/
+    float: left;
     padding: 10px 20px;
     color: #fff;
     font-size: 1em;
@@ -923,16 +923,47 @@ footer {
     }
 }
 
-@media(min-width:1024px) {
+/*
+@media(min-width:1024px) and (orientation:landscape) {
+
+    main h2 {
+        font-size: 3em;
+        line-height: 10vh;
+    }
+
+
+    .credo .row {
+        top: 25px;
+    }
+
+    .recom {
+        height: 80vh;
+    }
+
+    .recom .background {
+        height: 80vh;
+    }
+
+    .companies h1 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .second-toggle h2 {
+        font-size: 3em;
+    }
+
+    .contact {
+        height: 30vh;
+    }
+}
+*/
+
+@media only screen and (min-width:1024px) {
 
     header div.logo {
-        /*        padding: 15px;*/
         top: 5%;
         left: 5%;
-        /*        color: #eee;*/
-        /*        border: 1px solid #eee;*/
-
-
     }
 
 
@@ -998,6 +1029,7 @@ footer {
 
 
 
+
     .bg button:nth-last-child(1) {
         left: 77%;
     }
@@ -1022,38 +1054,6 @@ footer {
     #triangle-down {
         left: 47%;
     }
-
-    /*NOTE:zrobić animację, by się wyświetlał i tak zostawał*/
-    /* 
-#triangle {
-    position: absolute;
-    top: -26px;
-    left: 50%;
-    margin: 0 auto 0;
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-    border-left: 27px solid transparent;
-    border-right: 27px solid transparent;
-    border-bottom: 26px solid #0e1c2c;
-}
-*/
-    /*
-
-   
-
-*/
-
-    /*NOTE:może się przyda w animacji*/
-    /*
-.toggle:active #triangle {
-    opacity: 1;
-}
-
-.toggle:active #triangle-down {
-    opacity: 0;
-}
-*/
 
 
     .services h1 {
@@ -1109,7 +1109,7 @@ footer {
 
 
     .credo .row {
-        top: 80px;
+        top: 10px;
         height: 60vh;
     }
 
@@ -1128,24 +1128,21 @@ footer {
         display: block;
         padding: 60px 30px;
         max-width: 100%;
-
-        /*responsive image*/
         height: auto;
-        /*responsive image*/
     }
 
     .recom {
-        height: 50vh;
+        height: 70vh;
     }
 
     .recom .background {
-        height: 50vh;
+        height: 70vh;
     }
 
     .companies h1 {
-        margin-bottom: 40px;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        margin-bottom: 10px;
+        padding-top: 30px;
+        padding-bottom: 10px;
     }
 
     .companies span {
@@ -1171,7 +1168,7 @@ footer {
 
 
     .contact {
-        height: 20vh;
+        height: 30vh;
     }
 
     .contact .wrapper-contact {
@@ -1188,47 +1185,4 @@ footer {
         line-height: 40px;
     }
 
-}
-
-/* NOTE: contact form trzeba zrobić po kursie zaawansowanym*/
-
-
-/*
-    .contact-form {
-        visibility: hidden;
-    }*/
-
-
-@media(min-width:1024px) and (orientation:landscape) {
-
-    main h2 {
-        font-size: 3em;
-        line-height: 10vh;
-    }
-
-
-    .credo .row {
-        top: 25px;
-    }
-
-    .recom {
-        height: 80vh;
-    }
-
-    .recom .background {
-        height: 80vh;
-    }
-
-    .companies h1 {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .second-toggle h2 {
-        font-size: 3em;
-    }
-
-    .contact {
-        height: 30vh;
-    }
 }
