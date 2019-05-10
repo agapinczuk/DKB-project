@@ -1,0 +1,568 @@
+/*font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;;*/
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*    font-family: 'Roboto',
+sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header div.banner {
+    position: relative;
+    height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url(images/light-bulb-3104355_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: top 0% center;
+    background-size: cover;
+    */
+    /*    background-color: navy;*/
+}
+
+header div.banner > * {
+    position: absolute;
+}
+
+header div.logo {
+    padding: 15px;
+    top: 8%;
+    left: 5%;
+    color: #eee;
+    border: 1px solid #eee;
+    /*    background-color: #edcda1;*/
+}
+
+header div > strong {
+    display: block;
+    padding: 1px;
+    /*    font-family: 'Oswald',
+sans-serif;*/
+    font-size: 2em;
+    line-height: 170%;
+    z-index: 2;
+}
+
+header div > strong::first-letter {
+    font-size: 3em;
+}
+
+header div.welcome {
+    z-index: 1;
+    top: 55vh;
+    left: 5vw;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+header div.welcome h1 {
+    font-size: 3.6em;
+    font-weight: 400;
+    padding-top: 1em;
+    padding-bottom: .5em;
+}
+
+header div.welcome h2 {
+    font-size: 2.6em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/*main*/
+
+h1 {
+    margin: 30px 0 5px 0;
+    padding-bottom: 10px;
+    font-size: 6em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h3 {
+    margin: 10px 0 5px;
+    padding-bottom: 5px;
+    padding-top: 15px;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.who .wrapper {
+    float: left;
+    width: 50%;
+    margin: 20px auto;
+    /*    background-color: aqua;*/
+    /*tylko do testów*/
+}
+
+
+.wrapper p {
+    padding: 15px 30px;
+    font-size: 1.6em;
+    color: #999;
+    line-height: 1.8em;
+    font-weight: 400;
+    text-align: left;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.who img {
+
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 20px;
+    padding-right: 30px;
+    max-width: 100%;
+    /*responsive image*/
+    height: auto;
+    /*responsive image*/
+}
+
+
+/*
+.assist {
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+
+}
+
+.assist h3 {
+    float: left;
+    width: 60%;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.assist button {
+    float: left;
+    display: inline-block;
+    width: 15%;
+    background-color: #00816d;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px 50px;
+    border: 1px solid #00816d;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 26px;
+}
+*/
+
+.bg {
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    height: 13vh;
+
+}
+
+.bg h3 {
+    position: absolute;
+    width: 50%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bg button {
+    position: absolute;
+    top: center;
+    left: 55%;
+    display: inline-block;
+    width: 15%;
+    background-color: #00816d;
+    margin-top: 15px;
+    margin-right: 20px;
+    padding: 10px 50px;
+    border: 1px solid rgb(0, 129, 109);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.bg button:nth-last-child(1) {
+    left: 78%;
+    background-color: #213e5b;
+    border-color: #213e5b;
+}
+
+.bg button:hover {
+    opacity: 1;
+    /*    transition: 2s;*/
+}
+
+/*sekcja ze strzałką*/
+.toggle {
+    position: relative;
+    height: 15vh;
+    background-color: #0e1c2c;
+    color: #eee;
+    /*    cursor: pointer;*/
+}
+
+
+h2 {
+    font-size: 3.4em;
+    text-align: center;
+    line-height: 15vh;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+/*NOTE:zrobić animację, by się wyświetlał i tak zostawał*/
+/* 
+#triangle {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    margin: 0 auto 0;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-bottom: 26px solid #0e1c2c;
+}
+*/
+
+#triangle-down {
+    position: absolute;
+    left: 47.5%;
+    margin: 0 auto 0;
+    opacity: 1;
+    width: 0px;
+    height: 0px;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-top: 26px solid #0e1c2c;
+
+}
+
+/*NOTE:może się przyda w animacji*/
+/*
+.toggle:active #triangle {
+    opacity: 1;
+}
+
+.toggle:active #triangle-down {
+    opacity: 0;
+}
+*/
+
+.services h1 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    padding: 15px 0 20px;
+}
+
+.services .wrapper {
+    margin: 30px 40px;
+}
+
+.service {
+    float: left;
+    width: 33%;
+    padding: 30px;
+    text-align: center;
+
+}
+
+.iconbg {
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service i {
+    margin: 10px;
+    font-size: 4.5em;
+}
+
+.service h4 {
+    padding-top: 10px;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.service p {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.service ul {
+    margin-top: 30px;
+    list-style: none;
+}
+
+.service ul li {
+    color: #999;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    line-height: 51px;
+}
+
+.service ul li:nth-child(1) {
+    color: #00816d;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.service:hover {
+    background-color: rgb(0, 129, 109);
+}
+
+.service:hover h4,
+.service:hover p,
+.service:hover li {
+    color: #fff;
+}
+
+.service:hover li:nth-child(1) {
+    color: #fff;
+    opacity: 1;
+}
+
+.service ul li:nth-child(2),
+.service ul li:nth-child(4) {
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+}
+
+
+.service:hover ul li:nth-child(2),
+.service:hover ul li:nth-child(4) {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.slogan .fixed-bg {
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(images/adult-3327336_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: .9;
+}
+
+.slogan .fixed-bg h1 {
+    position: absolute;
+    top: 22%;
+    margin: 5px 0 5px 0;
+    padding: 10px;
+    color: #fff;
+    font-size: 9em;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.credo {
+    height: 90vh;
+    background-image: url(images/accountant-1238598_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.credo .row {
+    position: relative;
+    top: 40px;
+    height: 90vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 40px;
+}
+
+.row > * {
+    position: absolute;
+}
+
+.credo .content {
+    top: 0;
+    right: 0;
+    width: 40%;
+    padding: 10px;
+}
+
+.credo p {
+    font-size: 2.6em;
+    color: #fff;
+    line-height: 1.8em;
+    font-weight: 400;
+    text-align: left;
+    word-wrap: break-word;
+    hyphens: auto;
+    /*    z-index: 2;*/
+
+}
+
+.credo .author {
+    font-size: 1.6em;
+}
+
+.credo img {
+    display: block;
+    padding: 20px 30px;
+    max-width: 100%;
+
+    /*responsive image*/
+    height: auto;
+    /*responsive image*/
+}
+
+
+.credo .background {
+    height: 90vh;
+    background-color: rgba(0, 60, 50, .9);
+}
+
+
+
+.recom {
+    position: relative;
+    height: 60vh;
+    background-image: url(images/accountant-1238598_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.companies h1 {
+    margin: 0 auto;
+    padding: 60px 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.companies span {
+    float: left;
+    padding: 20px 50px;
+    color: #fff;
+    font-size: 1.8em;
+}
+
+.recom .background {
+    height: 60vh;
+    background-color: rgba(0, 60, 50, .9);
+}
+
+.second-toggle .toggle {
+    position: relative;
+    background-color: #fff;
+    color: #182a36;
+    /*        cursor: pointer;*/
+}
+
+.second-toggle #triangle-down {
+    position: absolute;
+    border-top: 26px solid #fff;
+}
+
+.contact {
+    height: 40vh;
+    background-color: #0E1C2C;
+}
+
+.contact .wrapper-contact {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 30px 20px;
+
+}
+
+
+.contact .wrapper-contact button {
+    display: inline-block;
+    width: 29%;
+    background-color: transparent;
+    margin: 50px 20px;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 40px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.contact .wrapper-contact i {
+    padding-right: 10px;
+}
+
+.contact .wrapper-contact button:hover {
+    background-color: rgb(0, 129, 109);
+    border: 1px solid rgb(0, 129, 109);
+    opacity: 1;
+}
+
+/* NOTE: contact form trzeba zrobić po kursie zaawansowanym*/
+
+.contact-form {
+    visibility: hidden;
+}
+
+
+footer {
+    background-color: #0E1C2C;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    line-height: 20px;
+}
+
+}

@@ -17,7 +17,7 @@ html {
 sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    overflow-x: hidden;
+    /*    overflow-x: hidden;*/
 }
 
 .clearfix::after {
@@ -26,74 +26,73 @@ sans-serif;*/
     clear: both;
 }
 
+
 header div.banner {
     position: relative;
     height: 100vh;
-    max-width: 1920px;
+    max-width: 1280px;
     margin: 0 auto;
     background-image: url(images/light-bulb-3104355_1280.jpg);
     background-repeat: no-repeat;
-    background-position: top 0% center;
+    background-position: 50%;
     background-size: cover;
-    */
-    /*    background-color: navy;*/
 }
 
 header div.banner > * {
     position: absolute;
 }
 
+/*NOTE: pokombinować z logo tekstem, może kontur? może coś*/
+
 header div.logo {
-    padding: 15px;
-    top: 8%;
-    left: 5%;
+    padding: 3px;
+    top: 2%;
+    left: 5vw;
     color: #eee;
-    border: 1px solid #eee;
-    /*    background-color: #edcda1;*/
+    border: 1px solid #ddd;
 }
 
 header div > strong {
+
     display: block;
     padding: 1px;
-    /*    font-family: 'Oswald',
-sans-serif;*/
-    font-size: 2em;
-    line-height: 170%;
+    font-size: 1.5em;
+    line-height: 150%;
     z-index: 2;
 }
 
 header div > strong::first-letter {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 header div.welcome {
     z-index: 1;
-    top: 55vh;
+    bottom: 5vh;
     left: 5vw;
     color: #fff;
     letter-spacing: 1px;
-    text-align: center;
+    text-align: left;
 }
 
 header div.welcome h1 {
-    font-size: 3.6em;
+    font-size: 2.6em;
     font-weight: 400;
     padding-top: 1em;
     padding-bottom: .5em;
 }
 
 header div.welcome h2 {
-    font-size: 2.6em;
+    font-size: 1.6em;
     font-weight: 300;
     text-transform: uppercase;
 }
 
 /*main*/
 
-h1 {
-    margin: 30px 0 5px 0;
-    padding-bottom: 10px;
-    font-size: 6em;
+main h1 {
+    margin: 30px 5px 5px 5px;
+    padding-bottom: 5px;
+    font-size: 3em;
     font-weight: 400;
     letter-spacing: 1px;
     text-align: center;
@@ -102,8 +101,8 @@ h1 {
 h3 {
     margin: 10px 0 5px;
     padding-bottom: 5px;
-    padding-top: 15px;
-    font-size: 2.2em;
+    padding-top: 5px;
+    font-size: 1.6em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -111,19 +110,15 @@ h3 {
 }
 
 .who .wrapper {
-    float: left;
-    width: 50%;
-    margin: 20px auto;
-    /*    background-color: aqua;*/
-    /*tylko do testów*/
+    margin: 0 auto;
 }
 
-
 .wrapper p {
-    padding: 15px 30px;
-    font-size: 1.6em;
+    margin: 0 10px 15px;
+    padding: 5px 5px;
+    font-size: 1.2em;
     color: #999;
-    line-height: 1.8em;
+    line-height: 1.5em;
     font-weight: 400;
     text-align: left;
     word-wrap: break-word;
@@ -131,85 +126,48 @@ h3 {
 }
 
 .who img {
-
-    float: left;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    padding-top: 20px;
-    padding-right: 30px;
+    width: 100%;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
     max-width: 100%;
-    /*responsive image*/
     height: auto;
-    /*responsive image*/
 }
 
-
-/*
-.assist {
-
-    margin-top: 30px;
-    margin-bottom: 20px;
-
-
-}
-
-.assist h3 {
-    float: left;
-    width: 60%;
-
-    margin-left: 20px;
-    margin-right: 20px;
-
-    font-weight: 600;
-    text-align: center;
-
-}
-
-.assist button {
-    float: left;
-    display: inline-block;
-    width: 15%;
-    background-color: #00816d;
-    margin-top: 10px;
-    margin-right: 20px;
-    padding: 10px 50px;
-    border: 1px solid #00816d;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 26px;
-}
-*/
 
 .bg {
     position: relative;
     margin-top: 25px;
     margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 10px;
-    height: 13vh;
-
+    margin-left: auto;
+    margin-right: auto;
+    height: 20vh;
+    text-align: center;
 }
 
 .bg h3 {
     position: absolute;
-    width: 50%;
     font-weight: 600;
-    text-align: center;
+    /*    text-align: center;*/
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .bg button {
     position: absolute;
-    top: center;
-    left: 55%;
+    top: 45%;
+    left: 2%;
     display: inline-block;
-    width: 15%;
+    width: 44%;
     background-color: #00816d;
     margin-top: 15px;
-    margin-right: 20px;
-    padding: 10px 50px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px 20px;
     border: 1px solid rgb(0, 129, 109);
     color: #fff;
     text-transform: uppercase;
@@ -217,57 +175,37 @@ h3 {
     line-height: 20px;
     opacity: 0.8;
     cursor: pointer;
+    max-width: 310px;
 }
 
 .bg button:nth-last-child(1) {
-    left: 78%;
+    left: 52%;
     background-color: #213e5b;
     border-color: #213e5b;
 }
 
-.bg button:hover {
-    opacity: 1;
-    /*    transition: 2s;*/
-}
+
 
 /*sekcja ze strzałką*/
 .toggle {
     position: relative;
-    height: 15vh;
+    height: 22vh;
     background-color: #0e1c2c;
     color: #eee;
     /*    cursor: pointer;*/
 }
 
-
-h2 {
-    font-size: 3.4em;
+main h2 {
+    font-size: 2.5em;
     text-align: center;
-    line-height: 15vh;
+    line-height: 22vh;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
-
-/*NOTE:zrobić animację, by się wyświetlał i tak zostawał*/
-/* 
-#triangle {
-    position: absolute;
-    top: -26px;
-    left: 50%;
-    margin: 0 auto 0;
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-    border-left: 27px solid transparent;
-    border-right: 27px solid transparent;
-    border-bottom: 26px solid #0e1c2c;
-}
-*/
-
 #triangle-down {
     position: absolute;
-    left: 47.5%;
+    left: 42%;
     margin: 0 auto 0;
     opacity: 1;
     width: 0px;
@@ -278,38 +216,26 @@ h2 {
 
 }
 
-/*NOTE:może się przyda w animacji*/
-/*
-.toggle:active #triangle {
-    opacity: 1;
-}
-
-.toggle:active #triangle-down {
-    opacity: 0;
-}
-*/
 
 .services h1 {
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 10px;
     padding: 15px 0 20px;
 }
 
 .services .wrapper {
-    margin: 30px 40px;
+    margin: 5px 10px;
 }
 
 .service {
-    float: left;
-    width: 33%;
-    padding: 30px;
+    padding: 25px;
     text-align: center;
 
 }
 
 .iconbg {
-    height: 70px;
-    width: 70px;
+    height: 90px;
+    width: 90px;
     background-color: #fff;
     border-radius: 50%;
     margin-left: auto;
@@ -317,20 +243,21 @@ h2 {
 }
 
 .service i {
-    margin: 10px;
+    margin: 20px;
     font-size: 4.5em;
 }
 
 .service h4 {
-    padding-top: 10px;
-    font-size: 2em;
+    padding-top: 5px;
+    font-size: 1.6em;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .service p {
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    font-family: 'Roboto',
+        sans-serif;
     font-size: 1.4em;
     text-align: center;
     font-weight: 300;
@@ -338,7 +265,7 @@ h2 {
 }
 
 .service ul {
-    margin-top: 30px;
+    margin-top: 15px;
     list-style: none;
 }
 
@@ -386,7 +313,7 @@ h2 {
 
 .slogan .fixed-bg {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     margin: 0 auto;
     background-image: url(images/adult-3327336_1280.jpg);
     background-repeat: no-repeat;
@@ -402,24 +329,24 @@ h2 {
     margin: 5px 0 5px 0;
     padding: 10px;
     color: #fff;
-    font-size: 9em;
+    font-size: 4.5em;
     letter-spacing: 1px;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 .credo {
-    height: 90vh;
+    height: 80vh;
     background-image: url(images/accountant-1238598_1280.jpg);
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: bottom top;
     background-size: cover;
     background-attachment: fixed;
 }
 
 .credo .row {
     position: relative;
-    top: 40px;
-    height: 90vh;
+    /*    top: 20px;*/
+    height: 80vh;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -431,14 +358,13 @@ h2 {
 }
 
 .credo .content {
-    top: 0;
+    top: 40px;
     right: 0;
-    width: 40%;
     padding: 10px;
 }
 
 .credo p {
-    font-size: 2.6em;
+    font-size: 1.8em;
     color: #fff;
     line-height: 1.8em;
     font-weight: 400;
@@ -446,26 +372,21 @@ h2 {
     word-wrap: break-word;
     hyphens: auto;
     /*    z-index: 2;*/
-
 }
 
 .credo .author {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 .credo img {
-    display: block;
-    padding: 20px 30px;
+    visibility: hidden;
+    top: 10px;
+    left: 0;
     max-width: 100%;
-
-    /*responsive image*/
-    height: auto;
-    /*responsive image*/
 }
 
-
 .credo .background {
-    height: 90vh;
+    height: 80vh;
     background-color: rgba(0, 60, 50, .9);
 }
 
@@ -473,35 +394,46 @@ h2 {
 
 .recom {
     position: relative;
-    height: 60vh;
+    height: 70vh;
     background-image: url(images/accountant-1238598_1280.jpg);
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center bottom;
     background-size: cover;
     background-attachment: fixed;
 }
 
+
 .companies h1 {
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 60px 30px 30px;
     color: #fff;
     text-align: center;
+    /*    background-color: rgba(0, 60, 50, .9);*/
 }
 
 .companies span {
-    float: left;
-    padding: 20px 50px;
+    /*    float: left;*/
+    padding: 10px 20px;
     color: #fff;
-    font-size: 1.8em;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
 }
 
 .recom .background {
-    height: 60vh;
+    height: 70vh;
     background-color: rgba(0, 60, 50, .9);
+}
+
+.second-toggle h2 {
+    line-height: 11vh;
 }
 
 .second-toggle .toggle {
     position: relative;
+    height: 22vh;
+    margin-left: 5px;
+    margin-right: 5px;
     background-color: #fff;
     color: #182a36;
     /*        cursor: pointer;*/
@@ -513,30 +445,30 @@ h2 {
 }
 
 .contact {
-    height: 40vh;
     background-color: #0E1C2C;
 }
 
 .contact .wrapper-contact {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 30px 20px;
-
+    padding: 30px 5px;
+    text-align: center;
+    /*    width: 90%;*/
 }
 
 
 .contact .wrapper-contact button {
     display: inline-block;
-    width: 29%;
+    width: 90%;
     background-color: transparent;
-    margin: 50px 20px;
-    padding: 10px 30px;
-    border: 1px solid #fff;
-    color: #fff;
-    font-size: 1.5em;
+    margin: 10px 5px;
+    padding: 20px 5px 20px 10px;
+    border: 1px solid rgb(153, 153, 153);
+    color: rgb(153, 153, 153);
+    font-size: 1.4em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 40px;
+    line-height: 20px;
     opacity: 0.8;
     cursor: pointer;
 }
@@ -551,18 +483,752 @@ h2 {
     opacity: 1;
 }
 
-/* NOTE: contact form trzeba zrobić po kursie zaawansowanym*/
-
-.contact-form {
-    visibility: hidden;
-}
-
-
 footer {
     background-color: #0E1C2C;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(153, 153, 153, 0.8);
     text-align: center;
     line-height: 20px;
 }
 
+
+@media(min-width:410px) {
+
+    header div > strong {
+        font-size: 1.9em;
+    }
+
+    header div > strong::first-letter {
+        font-size: 2.4em;
+    }
+
+    header div.welcome {
+        bottom: 8vh;
+    }
+
+    header div.welcome h1 {
+        font-size: 3em;
+        padding-bottom: .7em;
+    }
+
+    header div.welcome h2 {
+        font-size: 1.8em;
+    }
+
+    main h1 {
+        font-size: 3.4em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    .wrapper p {
+        padding: 10px 10px;
+        font-size: 1.8em;
+        line-height: 1.8em;
+    }
+
+    main h2 {
+        font-size: 2.8em;
+    }
+
+    #triangle-down {
+        left: 43%;
+    }
+
+    .service i {
+        font-size: 5em;
+    }
+
+    .service h4 {
+        font-size: 1.8em;
+    }
+
+    .service p {
+        font-size: 1.6em;
+        line-height: 25px;
+    }
+
+    .service ul li {
+        font-size: 1.5em;
+        line-height: 53px;
+    }
+
+    .credo p {
+        font-size: 1.9em;
+        color: #fff;
+        line-height: 1.8em;
+        font-weight: 400;
+        text-align: left;
+        word-wrap: break-word;
+        hyphens: auto;
+        /*    z-index: 2;*/
+    }
+
+    .credo .author {
+        font-size: 1.5em;
+    }
+
+    .companies span {
+        font-size: 1.5em;
+    }
+
+    .second-toggle h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contact .wrapper-contact button {
+        font-size: 1.6em;
+        line-height: 24px;
+    }
+
+    footer {
+        font-size: 1.4em;
+    }
+
+}
+
+@media(min-width:600px) and (orientation:portrait) {
+
+    header div > strong {
+        font-size: 2.5em;
+    }
+
+    header div > strong::first-letter {
+        font-size: 2.6em;
+    }
+
+    header div.welcome {
+        bottom: 12vh;
+    }
+
+    header div.welcome h1 {
+        font-size: 3.5em;
+        padding-bottom: .7em;
+    }
+
+    header div.welcome h2 {
+        font-size: 2.3em;
+    }
+
+    main h1 {
+        font-size: 3.9em;
+    }
+
+    h3 {
+        font-size: 2.4em;
+    }
+
+
+    .wrapper p {
+        font-size: 1.9em;
+        line-height: 1.9em;
+    }
+
+    .who img {
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .bg {
+        height: 20vh;
+    }
+
+    .bg h3 {
+        width: 97%;
+    }
+
+    .bg button {
+        font-size: 1.9em;
+        line-height: 1.9em;
+    }
+
+    main h2 {
+        font-size: 3em;
+    }
+
+    .iconbg {
+        height: 100px;
+        width: 100px;
+    }
+
+    .service i {
+        font-size: 6em;
+    }
+
+    .service h4 {
+        font-size: 2.4em;
+    }
+
+    .service p {
+        font-size: 2em;
+        line-height: 30px;
+    }
+
+    .service ul li {
+        font-size: 1.9em;
+        line-height: 60px;
+    }
+
+    .slogan .fixed-bg {
+        height: 80vh;
+    }
+
+    .slogan .fixed-bg h1 {
+        font-size: 6em;
+        line-height: 130%;
+    }
+
+    .credo {
+        height: 70vh;
+    }
+
+    .credo .row {
+        height: 70vh;
+    }
+
+    .credo p {
+        margin-top: 30px;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .credo .author {
+        font-size: 1.9em;
+    }
+
+    .recom {
+        height: 70vh;
+    }
+
+
+    .companies h1 {
+        padding-top: 80px;
+    }
+
+    .companies span {
+        font-size: 2.3em;
+    }
+
+    .recom .background {
+        height: 70vh;
+    }
+
+    .second-toggle h2 {
+        font-size: 2.8em;
+        line-height: 22vh;
+    }
+
+    .contact .wrapper-contact button {
+        font-size: 1.6em;
+        line-height: 20px;
+    }
+
+    footer {
+        font-size: 1.4em;
+    }
+
+}
+
+@media(min-width:640px) {
+
+    .wrapper p {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .who img {
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .bg {
+        height: 35vh;
+    }
+
+    .bg h3 {
+        width: 97%;
+    }
+
+
+    #triangle-down {
+        left: 46%;
+    }
+
+    .credo p {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    .credo .author {
+        font-size: 1.4em;
+    }
+
+    .recom {
+        height: 85vh;
+    }
+
+
+    .companies h1 {
+        padding: 30px 30px 20px;
+    }
+
+    .companies span {
+        font-size: 1.2em;
+    }
+
+    .recom .background {
+        height: 85vh;
+    }
+
+    .second-toggle h2 {
+        line-height: 22vh;
+    }
+
+    .contact .wrapper-contact button {
+        font-size: 1.2em;
+        line-height: 18px;
+    }
+
+    footer {
+        font-size: 1.2em;
+    }
+
+}
+
+@media(min-width:732px) {
+
+    .bg button:nth-last-child(1) {
+        left: 54%;
+    }
+
+    .credo p {
+        margin-top: 10px;
+        font-size: 2em;
+    }
+
+    .credo .author {
+        font-size: 1.6em;
+    }
+
+    .recom {
+        height: 90vh;
+    }
+
+
+    .companies h1 {
+        padding-top: 40px;
+    }
+
+    .companies span {
+        font-size: 1.7em;
+    }
+
+    .recom .background {
+        height: 90vh;
+    }
+}
+
+/* NOTE: fajne logo wyszło przypadkiem, dopracować*/
+
+@media(min-width:768px) and (orientation:portrait) {
+
+    header div > strong {
+        font-size: 2.8em;
+    }
+
+    header div > strong::first-letter {
+        font-size: 3.1em;
+    }
+
+    header div.welcome {
+        bottom: 12vh;
+    }
+
+    header div.welcome h1 {
+        font-size: 4em;
+        padding-bottom: .7em;
+    }
+
+    header div.welcome h2 {
+        font-size: 2.6em;
+    }
+
+    .bg {
+        height: 20vh;
+    }
+
+    .bg button:nth-last-child(1) {
+        left: 57%;
+    }
+
+    .credo {
+        height: 70vh;
+    }
+
+    .credo .row {
+        height: 70vh;
+    }
+
+    .credo p {
+        margin-top: 30px;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .credo .author {
+        font-size: 1.9em;
+    }
+
+    .recom {
+        height: 70vh;
+    }
+
+
+    .companies h1 {
+        padding-top: 80px;
+    }
+
+    .companies span {
+        font-size: 2.3em;
+    }
+
+    .recom .background {
+        height: 70vh;
+    }
+
+    .contact .wrapper-contact button {
+        font-size: 1.8em;
+        line-height: 22px;
+    }
+
+    footer {
+        font-size: 1.5em;
+    }
+
+}
+
+@media(min-width:812px) {
+
+    .slogan .fixed-bg h1 {
+        font-size: 5.5em;
+        line-height: 130%;
+    }
+
+    .second-toggle h2 {
+        line-height: 20vh;
+    }
+}
+
+@media(min-width:1024px) {
+
+    header div.logo {
+        /*        padding: 15px;*/
+        top: 5%;
+        left: 5%;
+        /*        color: #eee;*/
+        /*        border: 1px solid #eee;*/
+
+
+    }
+
+
+    header div > strong {
+        font-size: 3.5em;
+    }
+
+    header div.welcome h1 {
+        font-size: 5.6em;
+    }
+
+    header div.welcome h2 {
+        font-size: 3.2em;
+    }
+
+    /*main*/
+
+    .who .wrapper {
+        float: left;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+
+    .wrapper p {
+        padding: 15px 20px;
+        font-size: 1.6em;
+        line-height: 1.8em;
+    }
+
+    .who img {
+        float: left;
+        margin-top: 50px;
+        width: 50%;
+        padding-top: 60px;
+        padding-right: 30px;
+    }
+
+    .bg {
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 8vh;
+
+    }
+
+    .bg h3 {
+        position: absolute;
+        width: 45%;
+        text-align: center;
+    }
+
+    .bg button {
+        position: absolute;
+        top: 8%;
+        left: 52%;
+        display: inline-block;
+        width: 20%;
+        line-height: 26px;
+    }
+
+
+
+    .bg button:nth-last-child(1) {
+        left: 77%;
+    }
+
+    .bg button:hover {
+        transition: 2s;
+    }
+
+
+    /*sekcja ze strzałką*/
+
+    .toggle {
+        height: 10vh;
+    }
+
+    main h2 {
+        font-size: 3.5em;
+        line-height: 10vh;
+    }
+
+
+    #triangle-down {
+        left: 47%;
+    }
+
+    /*NOTE:zrobić animację, by się wyświetlał i tak zostawał*/
+    /* 
+#triangle {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    margin: 0 auto 0;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-bottom: 26px solid #0e1c2c;
+}
+*/
+    /*
+
+   
+
+*/
+
+    /*NOTE:może się przyda w animacji*/
+    /*
+.toggle:active #triangle {
+    opacity: 1;
+}
+
+.toggle:active #triangle-down {
+    opacity: 0;
+}
+*/
+
+
+    .services h1 {
+        margin-top: 60px;
+        margin-bottom: 10px;
+        padding: 15px 0 20px;
+    }
+
+    .services .wrapper {
+        margin: 30px 40px;
+    }
+
+    .service {
+        float: left;
+        width: 33%;
+        padding: 30px;
+    }
+
+    .iconbg {
+        height: 70px;
+        width: 70px;
+    }
+
+    .service i {
+        margin: 10px;
+        font-size: 4.5em;
+    }
+
+    .service h4 {
+        padding-top: 10px;
+        font-size: 2em;
+    }
+
+    .service p {
+        margin-top: 20px;
+        font-size: 1.4em;
+        line-height: 23px;
+    }
+
+    .service ul {
+        margin-top: 30px;
+    }
+
+    .service ul li {
+        font-size: 1.3em;
+        line-height: 51px;
+    }
+
+
+    .slogan .fixed-bg h1 {
+        font-size: 9em;
+    }
+
+
+    .credo .row {
+        top: 80px;
+        height: 60vh;
+    }
+
+    .credo .content {
+        width: 50%;
+    }
+
+    .credo p {
+        font-size: 2.6em;
+        line-height: 1.8em;
+        text-align: left;
+    }
+
+    .credo img {
+        visibility: visible;
+        display: block;
+        padding: 60px 30px;
+        max-width: 100%;
+
+        /*responsive image*/
+        height: auto;
+        /*responsive image*/
+    }
+
+    .recom {
+        height: 50vh;
+    }
+
+    .recom .background {
+        height: 50vh;
+    }
+
+    .companies h1 {
+        margin-bottom: 40px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .companies span {
+        float: left;
+        padding: 50px 50px;
+        color: #fff;
+        font-size: 1.8em;
+        width: 33%;
+    }
+
+    .second-toggle .toggle {
+        height: 10vh;
+    }
+
+    .second-toggle h2 {
+        font-size: 3.5em;
+        line-height: 10vh;
+    }
+
+    .second-toggle #triangle-down {
+        left: 47%;
+    }
+
+
+    .contact {
+        height: 20vh;
+    }
+
+    .contact .wrapper-contact {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+
+    .contact .wrapper-contact button {
+        width: 29%;
+        margin: 50px 20px;
+        padding: 10px 30px;
+        font-size: 1.5em;
+        line-height: 40px;
+    }
+
+}
+
+/* NOTE: contact form trzeba zrobić po kursie zaawansowanym*/
+
+
+/*
+    .contact-form {
+        visibility: hidden;
+    }*/
+
+
+@media(min-width:1024px) and (orientation:landscape) {
+
+    main h2 {
+        font-size: 3em;
+        line-height: 10vh;
+    }
+
+
+    .credo .row {
+        top: 25px;
+    }
+
+    .recom {
+        height: 80vh;
+    }
+
+    .recom .background {
+        height: 80vh;
+    }
+
+    .companies h1 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .second-toggle h2 {
+        font-size: 3em;
+    }
+
+    .contact {
+        height: 30vh;
+    }
 }
