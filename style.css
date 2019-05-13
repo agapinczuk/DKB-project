@@ -491,7 +491,7 @@ footer {
 }
 
 
-@media(min-width:410px) {
+@media screen and (min-width:410px) {
 
     header div > strong {
         font-size: 1.9em;
@@ -565,6 +565,7 @@ footer {
         /*    z-index: 2;*/
     }
 
+
     .credo .author {
         font-size: 1.5em;
     }
@@ -589,7 +590,7 @@ footer {
 
 }
 
-@media(min-width:600px) and (orientation:portrait) {
+@media screen and (min-width:600px) and (orientation:portrait) {
 
     header div > strong {
         font-size: 2.5em;
@@ -732,7 +733,7 @@ footer {
 
 }
 
-@media(min-width:640px) {
+@media screen and (min-width:640px) {
 
     .wrapper p {
         font-size: 1.5em;
@@ -799,7 +800,7 @@ footer {
 
 }
 
-@media(min-width:732px) {
+@media screen and (min-width:732px) {
 
     .bg button:nth-last-child(1) {
         left: 54%;
@@ -834,7 +835,7 @@ footer {
 
 /* NOTE: fajne logo wyszło przypadkiem, dopracować*/
 
-@media(min-width:768px) and (orientation:portrait) {
+@media screen and (min-width:768px) and (orientation:portrait) {
 
     header div > strong {
         font-size: 2.8em;
@@ -911,7 +912,7 @@ footer {
 
 }
 
-@media(min-width:812px) {
+@media screen and (min-width:812px) {
 
     .slogan .fixed-bg h1 {
         font-size: 5.5em;
@@ -923,8 +924,8 @@ footer {
     }
 }
 
-/*
 @media(min-width:1024px) and (orientation:landscape) {
+
 
     main h2 {
         font-size: 3em;
@@ -957,9 +958,10 @@ footer {
         height: 30vh;
     }
 }
-*/
 
-@media only screen and (min-width:1024px) {
+
+@media screen and (min-width:1024px) {
+
 
     header div.logo {
         top: 5%;
@@ -1109,7 +1111,7 @@ footer {
 
 
     .credo .row {
-        top: 10px;
+        top: 5px;
         height: 60vh;
     }
 
@@ -1118,8 +1120,8 @@ footer {
     }
 
     .credo p {
-        font-size: 2.6em;
-        line-height: 1.8em;
+        font-size: 2.4em;
+        line-height: 1.6em;
         text-align: left;
     }
 
@@ -1127,7 +1129,7 @@ footer {
         visibility: visible;
         display: block;
         padding: 60px 30px;
-        max-width: 100%;
+        max-width: 50%;
         height: auto;
     }
 
