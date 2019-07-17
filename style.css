@@ -91,7 +91,35 @@ header div.welcome h2 {
 
 /*main*/
 
-main h1 {
+    4% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: 1;
+    }
+
+    87% {
+        opacity: 1;
+    }
+
+    96% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*MAIN*/
+
+/*section who + all h1 & h3 on the page*/
+
+.who h1,
+.services h1,
+.slogan .fixed-bg h1,
+.companies h1 {
     margin: 30px 5px 5px 5px;
     padding-bottom: 5px;
     font-size: 3em;
@@ -100,7 +128,8 @@ main h1 {
     text-align: center;
 }
 
-h3 {
+.who h3,
+.bg h3 {
     margin: 10px 0 5px;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -140,6 +169,27 @@ h3 {
 }
 
 
+@keyframes whoImg {
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(0);
+    }
+
+
+    60% {
+        transform: scale(1.1);
+    }
+
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*service & contact button*/
 .bg {
     position: relative;
     margin-top: 25px;
@@ -191,18 +241,23 @@ h3 {
     border-color: #213e5b;
 }
 
+.bg button:hover {
+    opacity: 1;
+}
 
+/*first-toggle section, second-toggle section*/
 
-/*sekcja ze strzałką*/
-.toggle {
+.first-toggle .toggle,
+.second-toggle .toggleTwo {
     position: relative;
     height: 22vh;
     background-color: #0e1c2c;
     color: #eee;
-    /*    cursor: pointer;*/
+    cursor: pointer;
 }
 
-main h2 {
+.first-toggle h2,
+.second-toggle h2 {
     font-size: 2.5em;
     text-align: center;
     line-height: 22vh;
@@ -210,11 +265,23 @@ main h2 {
     letter-spacing: 1px;
 }
 
-#triangle-down {
+.second-toggle h2 {
+    line-height: 11vh;
+}
+
+
+.first-toggle .triangle,
+.second-toggle .triangle {
+    display: none;
     position: absolute;
     left: 42%;
     margin: 0 auto 0;
     opacity: 1;
+
+}
+
+.first-toggle #triangle-down,
+.second-toggle #triangle-down {
     width: 0px;
     height: 0px;
     border-left: 27px solid transparent;
@@ -223,6 +290,40 @@ main h2 {
 
 }
 
+.first-toggle #triangle-up,
+.second-toggle #triangle-up {
+    width: 0px;
+    height: 0px;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-bottom: 26px solid #0e1c2c;
+    transform: translateX(-50%) translateY(-100%);
+
+}
+
+.second-toggle .toggleTwo {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #fff;
+    color: #182a36;
+
+}
+
+.second-toggle #triangle-down {
+    border-top: 26px solid #fff;
+}
+
+.second-toggle #triangle-up {
+    border-bottom: 26px solid #fff;
+}
+
+
+.first-toggle .triangle.active,
+.second-toggle .triangle.active {
+    display: block;
+}
+
+/*services section*/
 
 .services h1 {
     margin-top: 30px;
@@ -232,13 +333,45 @@ main h2 {
 
 .services .wrapper {
     margin: 5px 10px;
+
 }
 
 .service {
+    display: none;
     padding: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
-
+    background-color: #f8f8f8;
 }
+
+.service.active {
+    display: block;
+    animation: serviceAnimation 3s both;
+}
+
+.service:nth-child(2).active {
+    animation-delay: 1s;
+}
+
+.service:nth-child(3).active {
+    animation-delay: 2s;
+}
+
+@keyframes serviceAnimation {
+    0% {
+        transform: scale(0);
+    }
+
+    33.33% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 .iconbg {
     height: 90px;
@@ -318,6 +451,9 @@ main h2 {
     background-color: rgba(255, 255, 255, .2);
 }
 
+
+/*slogan section*/
+
 .slogan .fixed-bg {
     position: relative;
     height: 90vh;
@@ -338,6 +474,7 @@ main h2 {
     color: #fff;
     font-size: 4.5em;
     letter-spacing: 1px;
+    text-align: center;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -498,15 +635,23 @@ footer {
 }
 
 
+/*nexus 6*/
 @media screen and (min-width:410px) {
 
-    header div > strong {
+
+    /*HEADER*/
+
+    /*Logotype*/
+
+    header div>strong {
         font-size: 1.9em;
     }
 
-    header div > strong::first-letter {
+    header div>strong::first-letter {
         font-size: 2.4em;
     }
+
+    /*banner slider*/
 
     header div.welcome {
         bottom: 8vh;
@@ -521,11 +666,17 @@ footer {
         font-size: 1.8em;
     }
 
-    main h1 {
+    /*section who + all h1 & h3 on the page*/
+
+    .who h1,
+    .services h1,
+    .slogan .fixed-bg h1,
+    .companies h1 {
         font-size: 3.4em;
     }
 
-    h3 {
+    .who h3,
+    .bg h3 {
         font-size: 2em;
     }
 
@@ -535,13 +686,19 @@ footer {
         line-height: 1.8em;
     }
 
-    main h2 {
+    /*first-toggle section, second-toggle section*/
+
+    .first-toggle h2,
+    .second-toggle h2 {
         font-size: 2.8em;
     }
 
-    #triangle-down {
-        left: 43%;
+    .second-toggle h2 {
+        padding-left: 10px;
+        padding-right: 10px;
     }
+
+    /*services section*/
 
     .service i {
         font-size: 5em;
@@ -595,16 +752,16 @@ footer {
         font-size: 1.4em;
     }
 
-    header div.welcome h1 {
-        font-size: 3.5em;
-        padding-bottom: .7em;
-    }
+    /*blackberry*/
+    @media screen and (min-width:600px) and (orientation:portrait) {
 
-@media screen and (min-width:600px) and (orientation:portrait) {
+        /*HEADER*/
 
-    header div > strong {
-        font-size: 2.5em;
-    }
+        /*Logotype*/
+
+        header div>strong {
+            font-size: 2.5em;
+        }
 
     header div > strong::first-letter {
         font-size: 2.6em;
@@ -1024,7 +1181,7 @@ footer {
 
     }
 
-    .bg h3 {
+        .bg h3 {
         position: absolute;
         width: 45%;
         text-align: center;
@@ -1089,10 +1246,10 @@ footer {
         width: 70px;
     }
 
-    .service i {
-        margin: 10px;
-        font-size: 4.5em;
-    }
+        .service i {
+            margin: 10px;
+            font-size: 4.5em;
+        }
 
     .service h4 {
         padding-top: 10px;
