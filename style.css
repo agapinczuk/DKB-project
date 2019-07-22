@@ -19,7 +19,7 @@ sans-serif;*/
     font-size: 10px;
     max-width: 1280px;
     margin: 0 auto;
-    /*    overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
 .clearfix::after {
@@ -28,33 +28,35 @@ sans-serif;*/
     clear: both;
 }
 
+/*HEADER*/
 
 header div.banner {
     position: relative;
     height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background-image: url(images/light-bulb-3104355_1280.jpg);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    /* width: 50vw; */
+    /* width: 100%; */
+    /* margin: 0 auto; */
 }
 
-header div.banner > * {
+header div.banner>* {
     position: absolute;
 }
 
-/*NOTE: pokombinować z logo tekstem, może kontur? może coś*/
+/*Logotype in header*/
 
 header div.logo {
     padding: 3px;
     top: 2%;
     left: 5vw;
-    color: #eee;
-    border: 1px solid #ddd;
+    color: #000;
+    border: 1px solid #000;
+    text-shadow: 0 0 2px #ddd, 0 0 2px #000;
+    z-index: 1;
 }
 
-header div > strong {
+header div>strong {
 
     display: block;
     padding: 1px;
@@ -63,33 +65,50 @@ header div > strong {
     z-index: 2;
 }
 
-header div > strong::first-letter {
+header div>strong::first-letter {
     font-size: 2em;
+}
+
+/*banner slider in header*/
+
+header .slider {
+    top: 0;
+    left: -23%;
+    /* width: auto; */
+    /* max-width: 100%; */
+    height: 100%;
+    /* width: 100%; */
 }
 
 header div.welcome {
     z-index: 1;
-    bottom: 5vh;
-    left: 5vw;
-    color: #fff;
+    bottom: 10vh;
+    left: 0;
+    width: 100%;
+    color: #ddd;
     letter-spacing: 1px;
-    text-align: left;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 header div.welcome h1 {
-    font-size: 2.6em;
-    font-weight: 400;
-    padding-top: 1em;
-    padding-bottom: .5em;
+
+    font-size: 2.4em;
+    padding-top: .5em;
+    animation: slider 8s linear infinite;
 }
 
 header div.welcome h2 {
-    font-size: 1.6em;
-    font-weight: 300;
+    font-size: 1.4em;
+    padding-bottom: .5em;
     text-transform: uppercase;
+    animation: textSlider 8s .5s linear infinite;
 }
 
-/*main*/
+@keyframes textSlider {
+    0% {
+        opacity: 0;
+    }
 
     4% {
         opacity: 0;
@@ -166,8 +185,15 @@ header div.welcome h2 {
     padding-left: 5px;
     max-width: 100%;
     height: auto;
+    transform: scale(0);
+    /* transition: .6s linear; */
+
 }
 
+.who img.active {
+    transform: scale(1);
+    animation: whoImg 2s;
+}
 
 @keyframes whoImg {
     0% {
@@ -200,43 +226,44 @@ header div.welcome h2 {
     text-align: center;
 }
 
-.bg h3 {
+.bg>* {
     position: absolute;
+}
+
+.bg h3 {
     font-weight: 600;
-    /*    text-align: center;*/
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .bg button {
-    position: absolute;
     top: 45%;
-    left: 2%;
-    display: inline-block;
+    right: 50%;
     width: 44%;
     background-color: #00816d;
     margin-top: 15px;
     margin-bottom: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 10px 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     border: 1px solid rgb(0, 129, 109);
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 20px;
     opacity: 0.8;
-    cursor: pointer;
     max-width: 310px;
 }
 
 .bg button a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .bg button:nth-last-child(1) {
-    left: 52%;
+    left: 50%;
     background-color: #213e5b;
     border-color: #213e5b;
 }
@@ -274,8 +301,8 @@ header div.welcome h2 {
 .second-toggle .triangle {
     display: none;
     position: absolute;
-    left: 42%;
-    margin: 0 auto 0;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 1;
 
 }
@@ -471,12 +498,15 @@ header div.welcome h2 {
     top: 22%;
     margin: 5px 0 5px 0;
     padding: 10px;
+    width: 100%;
     color: #fff;
     font-size: 4.5em;
     letter-spacing: 1px;
     text-align: center;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
+
+/*credo section*/
 
 .credo {
     height: 80vh;
@@ -489,7 +519,6 @@ header div.welcome h2 {
 
 .credo .row {
     position: relative;
-    /*    top: 20px;*/
     height: 80vh;
     width: 80%;
     margin-left: auto;
@@ -497,12 +526,12 @@ header div.welcome h2 {
     padding: 20px 40px;
 }
 
-.row > * {
+.row>* {
     position: absolute;
 }
 
 .credo .content {
-    top: 40px;
+    top: 5vh;
     right: 0;
     padding: 10px;
 }
@@ -534,7 +563,7 @@ header div.welcome h2 {
     background-color: rgba(0, 60, 50, .9);
 }
 
-
+/*section recommendation*/
 
 .recom {
     position: relative;
@@ -552,7 +581,6 @@ header div.welcome h2 {
     padding: 60px 30px 30px;
     color: #fff;
     text-align: center;
-    /*    background-color: rgba(0, 60, 50, .9);*/
 }
 
 .companies span {
@@ -569,24 +597,7 @@ header div.welcome h2 {
     background-color: rgba(0, 60, 50, .9);
 }
 
-.second-toggle h2 {
-    line-height: 11vh;
-}
 
-.second-toggle .toggle {
-    position: relative;
-    height: 22vh;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #fff;
-    color: #182a36;
-    /*        cursor: pointer;*/
-}
-
-.second-toggle #triangle-down {
-    position: absolute;
-    border-top: 26px solid #fff;
-}
 
 .contact {
     background-color: #0E1C2C;
@@ -634,6 +645,160 @@ footer {
     line-height: 20px;
 }
 
+/* OUTSIDE - NAVIGATION*/
+
+/*hamburger icon animation*/
+
+.burger {
+    position: fixed;
+    top: 6vh;
+    right: 6vh;
+    width: 60px;
+    height: 45px;
+    z-index: 10;
+    transition: .2s linear;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.burger.active {
+    transform: rotate(-90deg);
+    right: 15vh;
+}
+
+.burger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #111;
+    transition: top .2s .2s linear, bottom .2s .2s linear, opacity .2s .2s linear, transform .2s .4s linear;
+}
+
+.burger span:nth-child(1) {
+    top: 0;
+}
+
+.burger.active span:nth-child(1) {
+    top: calc(50% - 4px);
+    transform: rotate(45deg);
+}
+
+.burger span:nth-child(2) {
+    top: calc(50% - 4px);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger span:nth-child(3) {
+    bottom: 0;
+}
+
+.burger.active span:nth-child(3) {
+    bottom: calc(50% - 4px);
+    transform: rotate(-45deg);
+}
+
+/*body wrap change & aside animation + menu*/
+
+aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -25vh;
+    width: 25vh;
+    background-color: #0e1c2c;
+    z-index: 10;
+    transition: .2s linear;
+}
+
+aside.active {
+    left: 0;
+}
+
+aside>* {
+    position: absolute;
+}
+
+aside .logo {
+    padding: 3px;
+    top: 1%;
+    left: 3vw;
+    color: #000;
+    border: 1px solid #000;
+    text-shadow: 0 0 2px #ddd, 0 0 2px #000;
+    z-index: 1;
+}
+
+aside .logo {
+
+    display: block;
+    padding: 1px;
+    font-size: 1.5em;
+    line-height: 150%;
+    z-index: 2;
+}
+
+aside .logo {
+    font-size: 2em;
+}
+
+.menu ul {
+    padding: 8vw;
+    list-style: none;
+}
+
+.menu li::before {
+    content: "\2022";
+    color: #888;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    vertical-align: 20%;
+}
+
+.menu a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    color: #888;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-top: 1px solid #243540;
+}
+
+.menu a:hover .menu li::before {
+    color: #fff;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.menu li:first-child a {
+    border-top: 0px;
+}
+
+/*all website wrapper*/
+
+.wrap {
+    transition: .2s linear;
+}
+
+.wrap.active {
+    padding-left: 25vh;
+}
+
+
+
+
+/*MEDIA QUERIES*/
 
 /*nexus 6*/
 @media screen and (min-width:410px) {
@@ -718,6 +883,7 @@ footer {
         line-height: 53px;
     }
 
+    /*credo section*/
     .credo p {
         font-size: 1.9em;
         color: #fff;
@@ -734,14 +900,13 @@ footer {
         font-size: 1.5em;
     }
 
+    /*section recommendation*/
+
     .companies span {
         font-size: 1.5em;
     }
 
-    .second-toggle h2 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+
 
     .contact .wrapper-contact button {
         font-size: 1.6em;
@@ -763,615 +928,681 @@ footer {
             font-size: 2.5em;
         }
 
-    header div > strong::first-letter {
-        font-size: 2.6em;
-    }
-
-    header div.welcome {
-        bottom: 12vh;
-    }
-
-    header div.welcome h1 {
-        font-size: 3.5em;
-        padding-bottom: .7em;
-    }
-
-    header div.welcome h2 {
-        font-size: 2.3em;
-    }
-
-    main h1 {
-        font-size: 3.9em;
-    }
-
-    h3 {
-        font-size: 2.4em;
-    }
-
-
-    .wrapper p {
-        font-size: 1.9em;
-        line-height: 1.9em;
-    }
-
-    .who img {
-        padding-top: 5px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-
-    .bg {
-        height: 20vh;
-    }
-
-    .bg h3 {
-        width: 97%;
-    }
-
-    .bg button {
-        font-size: 1.9em;
-        line-height: 1.9em;
-    }
-
-    main h2 {
-        font-size: 3em;
-    }
-
-    .iconbg {
-        height: 100px;
-        width: 100px;
-    }
-
-    .service i {
-        font-size: 6em;
-    }
-
-    .service h4 {
-        font-size: 2.4em;
-    }
-
-    .service p {
-        font-size: 2em;
-        line-height: 30px;
-    }
-
-    .service ul li {
-        font-size: 1.9em;
-        line-height: 60px;
-    }
-
-    .slogan .fixed-bg {
-        height: 80vh;
-    }
-
-    .slogan .fixed-bg h1 {
-        font-size: 6em;
-        line-height: 130%;
-    }
-
-    .credo {
-        height: 70vh;
-    }
-
-    .credo .row {
-        height: 70vh;
-    }
-
-    .credo p {
-        margin-top: 30px;
-        font-size: 2.5em;
-        text-align: center;
-    }
-
-    .credo .author {
-        font-size: 1.9em;
-    }
-
-    .recom {
-        height: 70vh;
-    }
-
-
-    .companies h1 {
-        padding-top: 80px;
-    }
-
-    .companies span {
-        font-size: 2.3em;
-    }
-
-    .recom .background {
-        height: 70vh;
-    }
-
-    .second-toggle h2 {
-        font-size: 2.8em;
-        line-height: 22vh;
-    }
-
-    .contact .wrapper-contact button {
-        font-size: 1.6em;
-        line-height: 20px;
-    }
-
-    footer {
-        font-size: 1.4em;
-    }
-
-}
-
-@media screen and (min-width:640px) {
-
-    .wrapper p {
-        font-size: 1.5em;
-        line-height: 1.5em;
-    }
-
-    .who img {
-        padding-top: 5px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-
-    .bg {
-        height: 35vh;
-    }
-
-    .bg h3 {
-        width: 97%;
-    }
-
-
-    #triangle-down {
-        left: 46%;
-    }
-
-    .credo p {
-        font-size: 1.7em;
-        text-align: center;
-    }
-
-    .credo .author {
-        font-size: 1.4em;
-    }
-
-    .recom {
-        height: 85vh;
-    }
-
-
-    .companies h1 {
-        padding: 30px 30px 20px;
-    }
-
-    .companies span {
-        font-size: 1.2em;
-    }
-
-    .recom .background {
-        height: 85vh;
-    }
-
-    .second-toggle h2 {
-        line-height: 22vh;
-    }
-
-    .contact .wrapper-contact button {
-        font-size: 1.2em;
-        line-height: 18px;
-    }
-
-    footer {
-        font-size: 1.2em;
-    }
-
-}
-
-@media screen and (min-width:732px) {
-
-    .bg button:nth-last-child(1) {
-        left: 54%;
-    }
-
-    .credo p {
-        margin-top: 10px;
-        font-size: 2em;
-    }
-
-    .credo .author {
-        font-size: 1.6em;
-    }
-
-    .recom {
-        height: 90vh;
-    }
-
-
-    .companies h1 {
-        padding-top: 40px;
-    }
-
-    .companies span {
-        font-size: 1.7em;
-    }
-
-    .recom .background {
-        height: 90vh;
-    }
-}
-
-/* NOTE: fajne logo wyszło przypadkiem, dopracować*/
-
-@media screen and (min-width:768px) and (orientation:portrait) {
-
-    header div > strong {
-        font-size: 2.8em;
-    }
-
-    header div > strong::first-letter {
-        font-size: 3.1em;
-    }
-
-    header div.welcome {
-        bottom: 12vh;
-    }
-
-    header div.welcome h1 {
-        font-size: 4em;
-        padding-bottom: .7em;
-    }
-
-    header div.welcome h2 {
-        font-size: 2.6em;
-    }
-
-    .bg {
-        height: 20vh;
-    }
-
-    .bg button:nth-last-child(1) {
-        left: 57%;
-    }
-
-    .credo {
-        height: 70vh;
-    }
-
-    .credo .row {
-        height: 70vh;
-    }
-
-    .credo p {
-        margin-top: 30px;
-        font-size: 2.5em;
-        text-align: center;
-    }
-
-    .credo .author {
-        font-size: 1.9em;
-    }
-
-    .recom {
-        height: 70vh;
-    }
-
-
-    .companies h1 {
-        padding-top: 80px;
-    }
-
-    .companies span {
-        font-size: 2.3em;
-    }
-
-    .recom .background {
-        height: 70vh;
-    }
-
-    .contact .wrapper-contact button {
-        font-size: 1.8em;
-        line-height: 22px;
-    }
-
-    footer {
-        font-size: 1.5em;
-    }
-
-}
-
-@media screen and (min-width:812px) {
-
-    .slogan .fixed-bg h1 {
-        font-size: 5.5em;
-        line-height: 130%;
-    }
-
-    .second-toggle h2 {
-        line-height: 20vh;
-    }
-}
-
-@media(min-width:1024px) and (orientation:landscape) {
-
-
-    main h2 {
-        font-size: 3em;
-        line-height: 10vh;
-    }
-
-
-    .credo .row {
-        top: 25px;
-    }
-
-    .recom {
-        height: 80vh;
-    }
-
-    .recom .background {
-        height: 80vh;
-    }
-
-    .companies h1 {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .second-toggle h2 {
-        font-size: 3em;
-    }
-
-    .contact {
-        height: 30vh;
-    }
-}
-
-
-@media screen and (min-width:1024px) {
-
-
-    header div.logo {
-        top: 5%;
-        left: 5%;
-    }
-
-
-    header div > strong {
-        font-size: 3.5em;
-    }
-
-    header div.welcome h1 {
-        font-size: 5.6em;
-    }
-
-    header div.welcome h2 {
-        font-size: 3.2em;
-    }
-
-    /*main*/
-
-    .who .wrapper {
-        float: left;
-        width: 50%;
-        margin: 20px auto;
-    }
-
-
-    .wrapper p {
-        padding: 15px 20px;
-        font-size: 1.6em;
-        line-height: 1.8em;
-    }
-
-    .who img {
-        float: left;
-        margin-top: 50px;
-        width: 50%;
-        padding-top: 60px;
-        padding-right: 30px;
-    }
-
-    .bg {
-        position: relative;
-        margin-top: 25px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        height: 8vh;
-
-    }
+        header div>strong::first-letter {
+            font-size: 2.6em;
+        }
+
+        /*banner slider*/
+
+        header div.welcome {
+            bottom: 12vh;
+        }
+
+        header div.welcome h1 {
+            font-size: 3.5em;
+            padding-bottom: .7em;
+        }
+
+        header div.welcome h2 {
+            font-size: 2.3em;
+        }
+
+        /*section who + all h1 & h3 on the page*/
+
+        .who h1,
+        .services h1,
+        .slogan .fixed-bg h1,
+        .companies h1 {
+            font-size: 3.9em;
+        }
+
+        .who h3,
+        .bg h3 {
+            font-size: 2.4em;
+        }
+
+
+        .wrapper p {
+            font-size: 1.9em;
+            line-height: 1.9em;
+        }
+
+        .who img {
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        /*service & contact button*/
 
         .bg h3 {
-        position: absolute;
-        width: 45%;
-        text-align: center;
+            width: 97%;
+        }
+
+        .bg button {
+            font-size: 1.9em;
+            line-height: 1.9em;
+        }
+
+        /*first-toggle section, second-toggle section*/
+
+        .first-toggle h2,
+        .second-toggle h2 {
+            font-size: 3.6em;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        /*services section*/
+
+        .iconbg {
+            height: 100px;
+            width: 100px;
+        }
+
+        .service i {
+            font-size: 6em;
+        }
+
+        .service h4 {
+            font-size: 2.4em;
+        }
+
+        .service p {
+            font-size: 2em;
+            line-height: 30px;
+        }
+
+        .service ul li {
+            font-size: 1.9em;
+            line-height: 60px;
+        }
+
+        /*slogan section*/
+
+        .slogan .fixed-bg {
+            height: 80vh;
+        }
+
+        .slogan .fixed-bg h1 {
+            font-size: 6em;
+            line-height: 130%;
+        }
+
+        /*credo section*/
+
+        .credo {
+            height: 70vh;
+        }
+
+        .credo .row {
+            height: 70vh;
+        }
+
+        .credo p {
+            margin-top: 30px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .credo .author {
+            font-size: 1.9em;
+        }
+
+        /*section recommendation*/
+
+        .recom {
+            height: 70vh;
+        }
+
+
+        .companies h1 {
+            padding-top: 80px;
+        }
+
+        .companies span {
+            font-size: 2.3em;
+        }
+
+        .recom .background {
+            height: 70vh;
+        }
+
+
+        .contact .wrapper-contact button {
+            font-size: 1.6em;
+            line-height: 20px;
+        }
+
+        footer {
+            font-size: 1.4em;
+        }
+
     }
 
-    .bg button {
-        position: absolute;
-        top: 8%;
-        left: 52%;
-        display: inline-block;
-        width: 20%;
-        line-height: 26px;
+    @media screen and (min-width:640px) {
+
+        /*HEADER*/
+
+        /*banner slider*/
+
+        header .slider {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*section who*/
+
+        .wrapper p {
+            font-size: 1.5em;
+            line-height: 1.5em;
+        }
+
+        .who img {
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        /*service & contact button*/
+
+        .bg {
+            height: 35vh;
+        }
+
+        .bg h3 {
+            width: 97%;
+        }
+
+        /*first-toggle section, second-toggle section*/
+
+        .second-toggle h2 {
+            line-height: 22vh;
+        }
+
+        /*credo section*/
+
+        .credo p {
+            font-size: 1.7em;
+            text-align: center;
+        }
+
+        .credo .author {
+            font-size: 1.4em;
+        }
+
+        /*section recommendation*/
+
+        .recom {
+            height: 85vh;
+        }
+
+
+        .companies h1 {
+            padding: 30px 30px 20px;
+        }
+
+        .companies span {
+            font-size: 1.2em;
+        }
+
+        .recom .background {
+            height: 85vh;
+        }
+
+
+
+        .contact .wrapper-contact button {
+            font-size: 1.2em;
+            line-height: 18px;
+        }
+
+        footer {
+            font-size: 1.2em;
+        }
+
+    }
+
+    @media screen and (min-width:732px) {
+
+        /*credo section*/
+
+        .credo p {
+            margin-top: 10px;
+            font-size: 2em;
+        }
+
+        .credo .author {
+            font-size: 1.6em;
+        }
+
+        /*section recommendation*/
+
+        .recom {
+            height: 90vh;
+        }
+
+
+        .companies h1 {
+            padding-top: 40px;
+        }
+
+        .companies span {
+            font-size: 1.7em;
+        }
+
+        .recom .background {
+            height: 90vh;
+        }
     }
 
 
 
+    @media screen and (min-width:768px) and (orientation:portrait) {
 
-    .bg button:nth-last-child(1) {
-        left: 77%;
+        /*HEADER*/
+
+        /*Logotype*/
+
+        header div>strong {
+            font-size: 2.8em;
+        }
+
+        header div>strong::first-letter {
+            font-size: 3.1em;
+        }
+
+        /*banner slider*/
+
+        header div.welcome {
+            bottom: 12vh;
+        }
+
+        header div.welcome h1 {
+            font-size: 4em;
+            padding-bottom: .7em;
+        }
+
+        header div.welcome h2 {
+            font-size: 2.6em;
+        }
+
+        /*service & contact button*/
+
+        .bg {
+            height: 20vh;
+        }
+
+        .bg button {
+
+            margin-right: 25px;
+            margin-left: 25px;
+
+        }
+
+        /*credo section*/
+
+        .credo {
+            height: 70vh;
+        }
+
+        .credo .row {
+            height: 70vh;
+        }
+
+        .credo p {
+            margin-top: 30px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .credo .author {
+            font-size: 1.9em;
+        }
+
+        /*section recommendation*/
+
+        .recom {
+            height: 70vh;
+        }
+
+
+        .companies h1 {
+            padding-top: 80px;
+        }
+
+        .companies span {
+            font-size: 2.3em;
+        }
+
+        .recom .background {
+            height: 70vh;
+        }
+
+
+
+        .contact .wrapper-contact button {
+            font-size: 1.8em;
+            line-height: 22px;
+        }
+
+        footer {
+            font-size: 1.5em;
+        }
+
     }
 
-    .bg button:hover {
-        transition: 2s;
+    /*iphoneX*/
+    @media screen and (min-width:812px) {
+
+        /*slogan section*/
+
+        .slogan .fixed-bg h1 {
+            font-size: 5.5em;
+            line-height: 130%;
+        }
+
+        /*second-toggle section*/
+
+        .second-toggle h2 {
+            line-height: 20vh;
+        }
     }
 
+    /*ipad*/
+    @media(min-width:1023px) and (orientation:landscape) {
 
-    /*sekcja ze strzałką*/
+        /*service & contact button*/
 
-    .toggle {
-        height: 10vh;
+        .bg {
+            height: 20vh;
+        }
+
+        .bg button {
+
+            margin-right: 25px;
+            margin-left: 25px;
+
+        }
+
+        /*first-toggle section, second-toggle section*/
+
+        .first-toggle h2,
+        .second-toggle h2 {
+            font-size: 3em;
+            line-height: 22vh;
+        }
+
+        .second-toggle h2 {
+            font-size: 3em;
+        }
+
+
+        /*credo section*/
+
+        .credo .row {
+            top: 25px;
+        }
+
+        /*section recommendation*/
+
+        .recom {
+            height: 80vh;
+        }
+
+        .recom .background {
+            height: 80vh;
+        }
+
+        .companies h1 {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+
+        .contact {
+            height: 30vh;
+        }
     }
 
-    main h2 {
-        font-size: 3.5em;
-        line-height: 10vh;
-    }
+    @media screen and (min-width:1025px) {
+
+        /*HEADER*/
+
+        /*Logotype*/
+
+        header div.logo {
+            top: 5%;
+            left: 5%;
+        }
 
 
-    #triangle-down {
-        left: 47%;
-    }
+        header div>strong {
+            font-size: 3.5em;
+        }
+
+        /*banner slider*/
+
+        header div.welcome h1 {
+            font-size: 5.6em;
+        }
+
+        header div.welcome h2 {
+            font-size: 3.2em;
+        }
+
+        /*MAIN*/
+
+        /*section who + all h1 & h3 on the page*/
+
+        .who .wrapper {
+            float: left;
+            width: 50%;
+            margin: 20px auto;
+        }
 
 
-    .services h1 {
-        margin-top: 60px;
-        margin-bottom: 10px;
-        padding: 15px 0 20px;
-    }
+        .wrapper p {
+            padding: 15px 20px;
+            font-size: 1.6em;
+            line-height: 1.8em;
+        }
 
-    .services .wrapper {
-        margin: 30px 40px;
-    }
+        .who img {
+            float: left;
+            /* margin-top: 0; */
+            width: 50%;
+            padding-top: 60px;
+            padding-right: 30px;
+        }
 
-    .service {
-        float: left;
-        width: 33%;
-        padding: 30px;
-    }
+        /*service & contact button*/
 
-    .iconbg {
-        height: 70px;
-        width: 70px;
-    }
+        .bg {
+            margin-top: 45px;
+            margin-bottom: 45px;
+            margin-left: 15px;
+            margin-right: 15px;
+            height: 8vh;
+        }
+
+        .bg h3 {
+            right: 50%;
+            width: 50%;
+            line-height: 8vh;
+            margin: 0 auto;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+
+        .bg button {
+            top: 0;
+            right: 0;
+            left: 50%;
+            width: 20%;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .bg button a {
+            padding: 0;
+            line-height: calc(8vh - 2px);
+        }
+
+        .bg button:nth-last-child(1) {
+            left: 100%;
+            transform: translateX(-100%);
+        }
+
+        /*first-toggle section, second-toggle section*/
+
+        .first-toggle .toggle,
+        .second-toggle .toggleTwo {
+            height: 15vh;
+        }
+
+        .first-toggle h2,
+        .second-toggle h2 {
+            font-size: 3.5em;
+            line-height: 15vh;
+        }
+
+        /*services section*/
+
+        .services h1 {
+            margin-top: 60px;
+            margin-bottom: 10px;
+            padding: 15px 0 20px;
+        }
+
+        .services {
+            margin: 20px 20px;
+        }
+
+        .services .wrapper {
+            margin: 0 auto;
+        }
+
+        .service {
+            float: left;
+            width: 33.33%;
+            padding: 30px;
+            border: 5px solid #fff;
+            margin: 0 auto;
+        }
+
+        .iconbg {
+            height: 70px;
+            width: 70px;
+        }
 
         .service i {
             margin: 10px;
             font-size: 4.5em;
         }
 
-    .service h4 {
-        padding-top: 10px;
-        font-size: 2em;
+        .service h4 {
+            padding-top: 10px;
+            font-size: 2em;
+        }
+
+        .service p {
+            margin-top: 20px;
+            font-size: 1.4em;
+            line-height: 23px;
+        }
+
+        .service ul {
+            margin-top: 30px;
+        }
+
+        .service ul li {
+            font-size: 1.3em;
+            line-height: 51px;
+        }
+
+        /*slogan section*/
+
+        .slogan .fixed-bg h1 {
+            font-size: 9em;
+        }
+
+        /*credo section*/
+
+        .credo .row {
+            top: 5px;
+            height: 60vh;
+        }
+
+        .credo .content {
+            width: 50%;
+        }
+
+        .credo p {
+            font-size: 2.4em;
+            line-height: 1.6em;
+            text-align: left;
+        }
+
+        .credo img {
+            visibility: visible;
+            display: block;
+            padding: 60px 30px;
+            max-width: 50%;
+            height: auto;
+        }
+
+        /*section recommendation*/
+
+        .recom {
+            height: 70vh;
+        }
+
+        .recom .background {
+            height: 70vh;
+        }
+
+        .companies h1 {
+            margin-bottom: 10px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+        .companies span {
+            float: left;
+            padding: 50px 50px;
+            color: #fff;
+            font-size: 1.8em;
+            width: 33%;
+        }
+
+
+
+
+        .contact {
+            height: 30vh;
+        }
+
+        .contact .wrapper-contact {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .contact .wrapper-contact button {
+            width: 29%;
+            margin: 50px 20px;
+            padding: 10px 30px;
+            font-size: 1.5em;
+            line-height: 40px;
+        }
+
+
+        .contact {
+            height: 30vh;
+        }
     }
-
-    .service p {
-        margin-top: 20px;
-        font-size: 1.4em;
-        line-height: 23px;
-    }
-
-    .service ul {
-        margin-top: 30px;
-    }
-
-    .service ul li {
-        font-size: 1.3em;
-        line-height: 51px;
-    }
-
-
-    .slogan .fixed-bg h1 {
-        font-size: 9em;
-    }
-
-
-    .credo .row {
-        top: 5px;
-        height: 60vh;
-    }
-
-    .credo .content {
-        width: 50%;
-    }
-
-    .credo p {
-        font-size: 2.4em;
-        line-height: 1.6em;
-        text-align: left;
-    }
-
-    .credo img {
-        visibility: visible;
-        display: block;
-        padding: 60px 30px;
-        max-width: 50%;
-        height: auto;
-    }
-
-    .recom {
-        height: 70vh;
-    }
-
-    .recom .background {
-        height: 70vh;
-    }
-
-    .companies h1 {
-        margin-bottom: 10px;
-        padding-top: 30px;
-        padding-bottom: 10px;
-    }
-
-    .companies span {
-        float: left;
-        padding: 50px 50px;
-        color: #fff;
-        font-size: 1.8em;
-        width: 33%;
-    }
-
-    .second-toggle .toggle {
-        height: 10vh;
-    }
-
-    .second-toggle h2 {
-        font-size: 3.5em;
-        line-height: 10vh;
-    }
-
-    .second-toggle #triangle-down {
-        left: 47%;
-    }
-
-
-    .contact {
-        height: 30vh;
-    }
-
-    .contact .wrapper-contact {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 30px 20px;
-    }
-
-    .contact .wrapper-contact button {
-        width: 29%;
-        margin: 50px 20px;
-        padding: 10px 30px;
-        font-size: 1.5em;
-        line-height: 40px;
-    }
-
-    .recom {
-        height: 80vh;
-    }
-
-    .recom .background {
-        height: 80vh;
-    }
-
-    .companies h1 {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .second-toggle h2 {
-        font-size: 3em;
-    }
-
-    .contact {
-        height: 30vh;
-    }
-}}
+}
