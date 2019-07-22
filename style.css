@@ -17,9 +17,14 @@ html {
 sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    max-width: 1280px;
+    /* max-width: 1280px; */
     margin: 0 auto;
     overflow-x: hidden;
+    user-select: none;
+
+    /*ZMIENNE*/
+    --toggleLineHeight: 22vh;
+    --toggleHeight: 22vh;
 }
 
 .clearfix::after {
@@ -46,17 +51,19 @@ header div.banner>* {
 
 /*Logotype in header*/
 
-header div.logo {
+header div.logo,
+aside .logo {
     padding: 3px;
-    top: 2%;
-    left: 5vw;
+    top: 1%;
+    left: 3vw;
     color: #000;
     border: 1px solid #000;
     text-shadow: 0 0 2px #ddd, 0 0 2px #000;
     z-index: 1;
 }
 
-header div>strong {
+header div>strong,
+aside .logo>strong {
 
     display: block;
     padding: 1px;
@@ -67,6 +74,11 @@ header div>strong {
 
 header div>strong::first-letter {
     font-size: 2em;
+}
+
+header div.logo.active {
+    opacity: 0;
+    transition: .2s linear;
 }
 
 /*banner slider in header*/
@@ -131,6 +143,7 @@ header div.welcome h2 {
     }
 }
 
+
 /*MAIN*/
 
 /*section who + all h1 & h3 on the page*/
@@ -141,7 +154,7 @@ header div.welcome h2 {
 .companies h1 {
     margin: 30px 5px 5px 5px;
     padding-bottom: 5px;
-    font-size: 3em;
+    font-size: 2.9em;
     font-weight: 400;
     letter-spacing: 1px;
     text-align: center;
@@ -222,7 +235,7 @@ header div.welcome h2 {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    height: 20vh;
+    height: 25vh;
     text-align: center;
 }
 
@@ -234,6 +247,7 @@ header div.welcome h2 {
     font-weight: 600;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 25px;
 }
 
 .bg button {
@@ -260,6 +274,12 @@ header div.welcome h2 {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
+    /* text-align: center; */
+}
+
+.bg button a.active {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .bg button:nth-last-child(1) {
@@ -277,7 +297,6 @@ header div.welcome h2 {
 .first-toggle .toggle,
 .second-toggle .toggleTwo {
     position: relative;
-    height: 22vh;
     background-color: #0e1c2c;
     color: #eee;
     cursor: pointer;
@@ -287,15 +306,17 @@ header div.welcome h2 {
 .second-toggle h2 {
     font-size: 2.5em;
     text-align: center;
-    line-height: 22vh;
+    line-height: var(--toggleLineHeight);
     font-weight: 400;
     letter-spacing: 1px;
+    height: 22vh;
 }
 
-.second-toggle h2 {
-    line-height: 11vh;
+.first-toggle h2.active,
+.second-toggle h2.active {
+    line-height: var(--toggleLineHeight)/2;
+    height: var(--toggleHeight)/2;
 }
-
 
 .first-toggle .triangle,
 .second-toggle .triangle {
@@ -365,7 +386,7 @@ header div.welcome h2 {
 
 .service {
     display: none;
-    padding: 25px;
+    padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
@@ -467,8 +488,8 @@ header div.welcome h2 {
 .service ul li:nth-child(2),
 .service ul li:nth-child(4) {
     display: block;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: #fff;
 }
 
@@ -504,6 +525,10 @@ header div.welcome h2 {
     letter-spacing: 1px;
     text-align: center;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.slogan .fixed-bg h1.active {
+    font-size: 3em;
 }
 
 /*credo section*/
@@ -545,6 +570,11 @@ header div.welcome h2 {
     word-wrap: break-word;
     hyphens: auto;
     /*    z-index: 2;*/
+}
+
+.credo p.active {
+    font-size: 1.6em;
+    line-height: 1.6em;
 }
 
 .credo .author {
@@ -597,10 +627,11 @@ header div.welcome h2 {
     background-color: rgba(0, 60, 50, .9);
 }
 
-
+/*contact section*/
 
 .contact {
     background-color: #0E1C2C;
+
 }
 
 .contact .wrapper-contact {
@@ -638,6 +669,50 @@ header div.welcome h2 {
     opacity: 1;
 }
 
+/*contact form in section contact*/
+
+.contact .wrapper-contact .address {
+    margin-bottom: 80px;
+}
+
+.contact label {
+    font-size: 2.8em;
+    color: #fff;
+}
+
+.contact .contact-form {
+    margin-top: 50px;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+    width: 80%;
+    min-height: 52px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #999;
+    line-height: 1.5em;
+    height: 3.6em;
+    text-transform: uppercase;
+    padding: 10px 26px;
+    border: 2px solid #999;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-form textarea {
+    height: 196px;
+    padding: 21px 27px;
+}
+
+.contact .contact-form .btnSend {
+    width: 60%;
+    background-color: rgba(0, 129, 109, 0.8);
+    opacity: 1;
+    color: #fff;
+    border-color: rgba(0, 129, 109, 0.8);
+}
+
 footer {
     background-color: #0E1C2C;
     color: rgba(153, 153, 153, 0.8);
@@ -665,7 +740,7 @@ footer {
 
 .burger.active {
     transform: rotate(-90deg);
-    right: 15vh;
+    right: 4vh;
 }
 
 .burger span {
@@ -703,7 +778,7 @@ footer {
     transform: rotate(-45deg);
 }
 
-/*body wrap change & aside animation + menu*/
+/*body wrap change, aside animation, aside logotype (base on header menu) + menu*/
 
 aside {
     position: fixed;
@@ -720,32 +795,26 @@ aside.active {
     left: 0;
 }
 
-aside>* {
-    position: absolute;
-}
-
 aside .logo {
+    margin: 5px;
     padding: 3px;
-    top: 1%;
-    left: 3vw;
-    color: #000;
-    border: 1px solid #000;
-    text-shadow: 0 0 2px #ddd, 0 0 2px #000;
-    z-index: 1;
+    left: 0;
+    color: #888;
+    border: 1px solid #888;
+    text-shadow: 0 0 0 #000, 0 0 0 #888;
 }
 
-aside .logo {
+aside .logo>strong {
 
-    display: block;
-    padding: 1px;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 150%;
     z-index: 2;
 }
 
-aside .logo {
-    font-size: 2em;
+aside .logo>strong::first-letter {
+    font-size: 2.5em;
 }
+
 
 .menu ul {
     padding: 8vw;
@@ -858,10 +927,10 @@ aside .logo {
         font-size: 2.8em;
     }
 
-    .second-toggle h2 {
+    /* .second-toggle h2 {
         padding-left: 10px;
         padding-right: 10px;
-    }
+    } */
 
     /*services section*/
 
@@ -905,8 +974,6 @@ aside .logo {
     .companies span {
         font-size: 1.5em;
     }
-
-
 
     .contact .wrapper-contact button {
         font-size: 1.6em;
@@ -975,6 +1042,10 @@ aside .logo {
 
         /*service & contact button*/
 
+        .bg {
+            height: 22vh;
+        }
+
         .bg h3 {
             width: 97%;
         }
@@ -1029,6 +1100,10 @@ aside .logo {
             line-height: 130%;
         }
 
+        .slogan .fixed-bg h1.active {
+            font-size: 4.5em;
+        }
+
         /*credo section*/
 
         .credo {
@@ -1043,6 +1118,11 @@ aside .logo {
             margin-top: 30px;
             font-size: 2.5em;
             text-align: center;
+        }
+
+        .credo p.active {
+            font-size: 2em;
+            line-height: 2em;
         }
 
         .credo .author {
@@ -1078,6 +1158,20 @@ aside .logo {
             font-size: 1.4em;
         }
 
+        /*OUTSIDE*/
+        /*aside logotype (base on header menu) + menu*/
+
+        aside .logo>strong {
+            font-size: 2.5em;
+        }
+
+        aside .logo>strong::first-letter {
+            font-size: 2.5em;
+        }
+
+        .menu a {
+            font-size: 2.5em;
+        }
     }
 
     @media screen and (min-width:640px) {
@@ -1117,9 +1211,15 @@ aside .logo {
 
         /*first-toggle section, second-toggle section*/
 
-        .second-toggle h2 {
-            line-height: 22vh;
+        .first-toggle h2.active,
+        .second-toggle h2.active {
+            line-height: var(--toggleLineHeight);
+            height: var(--toggleHeight);
         }
+
+        /* .second-toggle h2 {
+            line-height: 22vh;
+        } */
 
         /*credo section*/
 
@@ -1135,7 +1235,7 @@ aside .logo {
         /*section recommendation*/
 
         .recom {
-            height: 85vh;
+            height: 100vh;
         }
 
 
@@ -1148,7 +1248,7 @@ aside .logo {
         }
 
         .recom .background {
-            height: 85vh;
+            height: 100vh;
         }
 
 
@@ -1162,8 +1262,37 @@ aside .logo {
             font-size: 1.2em;
         }
 
+        /*OUTSIDE*/
+        /*aside logotype (base on header menu) + menu*/
+        aside {
+            left: -50vh;
+            width: 50vh;
+        }
+
+
+        aside .logo>strong {
+            font-size: 1.6em;
+        }
+
+        aside .logo>strong::first-letter {
+            font-size: 2em;
+        }
+
+
+        .menu ul {
+            padding: 2vh 5vw;
+        }
+
+
+        /*all website wrapper*/
+
+        .wrap.active {
+            padding-left: 50vh;
+        }
+
     }
 
+    /*nexus6*/
     @media screen and (min-width:732px) {
 
         /*credo section*/
@@ -1291,6 +1420,40 @@ aside .logo {
             font-size: 1.5em;
         }
 
+        /*OUTSIDE*/
+        /*aside logotype (base on header menu) + menu*/
+        aside {
+            left: -25vh;
+            width: 25vh;
+        }
+
+        aside .logo {
+            margin: 5px;
+            padding: 15px;
+        }
+
+        aside .logo>strong {
+            font-size: 3em;
+            line-height: 150%;
+        }
+
+        aside .logo>strong::first-letter {
+            font-size: 3.5em;
+            line-height: 50%;
+        }
+
+        .menu a {
+
+            font-size: 3em;
+        }
+
+        /*all website wrapper*/
+
+        .wrap.active {
+            padding-left: 25vh;
+        }
+
+
     }
 
     /*iphoneX*/
@@ -1362,8 +1525,37 @@ aside .logo {
 
 
         .contact {
-            height: 30vh;
+            height: 40vh;
         }
+
+        /*OUTSIDE*/
+        /*aside logotype (base on header menu) + menu*/
+        aside {
+            left: -50vh;
+            width: 50vh;
+        }
+
+        aside .logo>strong {
+            font-size: 2.5em;
+            line-height: 150%;
+        }
+
+        aside .logo>strong::first-letter {
+            font-size: 3em;
+            line-height: 50%;
+        }
+
+        .menu a {
+
+            font-size: 2.6em;
+        }
+
+        /*all website wrapper*/
+
+        .wrap.active {
+            padding-left: 50vh;
+        }
+
     }
 
     @media screen and (min-width:1025px) {
@@ -1458,17 +1650,28 @@ aside .logo {
         }
 
         /*first-toggle section, second-toggle section*/
-
+        /* 
         .first-toggle .toggle,
         .second-toggle .toggleTwo {
             height: 15vh;
-        }
+        } */
 
         .first-toggle h2,
         .second-toggle h2 {
             font-size: 3.5em;
             line-height: 15vh;
+            height: 15vh;
         }
+
+
+        /* !!!!!!!!!!!!!!!!!!!!!!! */
+
+        .first-toggle h2.active,
+        .second-toggle h2.active {
+            line-height: 15vh;
+            height: 15vh;
+        }
+
 
         /*services section*/
 
@@ -1528,6 +1731,10 @@ aside .logo {
 
         .slogan .fixed-bg h1 {
             font-size: 9em;
+        }
+
+        .slogan .fixed-bg h1.active {
+            font-size: 5em;
         }
 
         /*credo section*/
@@ -1603,6 +1810,18 @@ aside .logo {
 
         .contact {
             height: 30vh;
+        }
+
+        /*OUTSIDE*/
+        /* hamburger + menu*/
+
+
+        .burger.active {
+            right: 6vh;
+        }
+
+        .menu ul {
+            padding-top: 12vh;
         }
     }
 }

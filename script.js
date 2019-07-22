@@ -35,7 +35,7 @@ $(document).on('scroll', function () {
     const windowHeight = $(window).height();
     const scrollValue = $(this).scrollTop();
 
-    // IMG's IN WHO SECTION
+    // img's in who section
 
     const $imgWho = $('.who img');
     const $who = $('.who');
@@ -46,7 +46,7 @@ $(document).on('scroll', function () {
         $imgWho.addClass('active');
     }
 
-    // SERVICE COLUMN in SERVICES SECTION
+    // service column in service section
 
     const $serviceColumn = $('.service');
     const $servicesSection = $('.services');
@@ -66,7 +66,7 @@ $(document).on('scroll', function () {
 
 })
 
-// TRIANGLE switch IN TOGGLE SECTION
+// TRIANGLE SWITCH IN TOGGLE SECTION
 
 const toggle = document.querySelector('.toggle');
 const toggleTwo = document.querySelector('.toggleTwo');
@@ -81,3 +81,17 @@ function toggleSwitch() {
 
 toggle.addEventListener('click', toggleSwitch);
 toggleTwo.addEventListener('click', toggleSwitch);
+
+
+// CLICK ANIMATION IN SECTIONS
+
+// burger animation
+
+const burger = document.querySelector('.burger');
+const showElement = document.querySelectorAll('.show');
+
+burger.addEventListener('click', function () {
+    for (let i = 0; i < showElement.length; i++) {
+        showElement[i].classList.toggle('active');
+    }
+})
