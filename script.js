@@ -83,9 +83,7 @@ toggle.addEventListener('click', toggleSwitch);
 toggleTwo.addEventListener('click', toggleSwitch);
 
 
-// CLICK ANIMATION IN SECTIONS
-
-// burger animation
+// CLICK BURGER ANIMATION IN SECTIONS
 
 const burger = document.querySelector('.burger');
 const showElement = document.querySelectorAll('.show');
@@ -94,4 +92,15 @@ burger.addEventListener('click', function () {
     for (let i = 0; i < showElement.length; i++) {
         showElement[i].classList.toggle('active');
     }
+})
+
+//CONTACT HIDDING DIV's
+
+// contact-form
+
+const emailBtn = document.querySelector('.email');
+const contactForm = document.querySelector('.contact-form');
+
+emailBtn.addEventListener('click', function () {
+    contactForm.classList.toggle('active');
 })
