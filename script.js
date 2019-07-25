@@ -98,9 +98,20 @@ burger.addEventListener('click', function () {
 
 // contact-form
 
-const emailBtn = document.querySelector('.email');
-const contactForm = document.querySelector('.contact-form');
+// const emailBtn = document.querySelector('.email');
+// const contactForm = document.querySelector('.contact-form');
 
-emailBtn.addEventListener('click', function () {
-    contactForm.classList.toggle('active');
-})
+// emailBtn.addEventListener('click', function () {
+//     contactForm.classList.toggle('active');
+// })
+
+$('.email').on('click', function () {
+    $('.contact-form').toggleClass('active');
+
+    const goToContactForm = "[data-section=" + $(this).attr('class') + "]";
+    $('body, html').animate({
+        scrollTop: $(goToContactForm).offset().top
+    })
+
+
+});

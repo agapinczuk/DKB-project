@@ -25,6 +25,9 @@ sans-serif;*/
     /*ZMIENNE*/
     --toggleLineHeight: 22vh;
     --toggleHeight: 22vh;
+    --mainCol: #00816d;
+    --bgcCol: #003c32e6;
+    --menuFooterBgc: #0E1C2C;
 }
 
 .clearfix::after {
@@ -254,12 +257,12 @@ header div.welcome h2 {
     top: 45%;
     right: 50%;
     width: 44%;
-    background-color: #00816d;
+    background-color: var(--mainCol);
     margin-top: 15px;
     margin-bottom: 20px;
     margin-right: 10px;
     margin-left: 10px;
-    border: 1px solid rgb(0, 129, 109);
+    border: 1px solid var(--mainCol);
     opacity: 0.8;
     max-width: 310px;
 }
@@ -284,8 +287,8 @@ header div.welcome h2 {
 
 .bg button:nth-last-child(1) {
     left: 50%;
-    background-color: #213e5b;
-    border-color: #213e5b;
+    background-color: var(--menuFooterBgc);
+    border-color: var(--menuFooterBgc);
 }
 
 .bg button:hover {
@@ -297,7 +300,7 @@ header div.welcome h2 {
 .first-toggle .toggle,
 .second-toggle .toggleTwo {
     position: relative;
-    background-color: #0e1c2c;
+    background-color: var(--menuFooterBgc);
     color: #eee;
     cursor: pointer;
 }
@@ -334,7 +337,7 @@ header div.welcome h2 {
     height: 0px;
     border-left: 27px solid transparent;
     border-right: 27px solid transparent;
-    border-top: 26px solid #0e1c2c;
+    border-top: 26px solid var(--menuFooterBgc);
 
 }
 
@@ -344,7 +347,7 @@ header div.welcome h2 {
     height: 0px;
     border-left: 27px solid transparent;
     border-right: 27px solid transparent;
-    border-bottom: 26px solid #0e1c2c;
+    border-bottom: 26px solid var(--menuFooterBgc);
     transform: translateX(-50%) translateY(-100%);
 
 }
@@ -466,13 +469,13 @@ header div.welcome h2 {
 }
 
 .service ul li:nth-child(1) {
-    color: #00816d;
+    color: var(--mainCol);
     font-weight: 700;
     opacity: 0.8;
 }
 
 .service:hover {
-    background-color: rgb(0, 129, 109);
+    background-color: var(--mainCol);
 }
 
 .service:hover h4,
@@ -525,7 +528,7 @@ header div.welcome h2 {
     font-size: 4.5em;
     letter-spacing: 1px;
     text-align: center;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
 }
 
 .slogan .fixed-bg h1.active {
@@ -591,7 +594,8 @@ header div.welcome h2 {
 
 .credo .background {
     height: 80vh;
-    background-color: rgba(0, 60, 50, .9);
+    background-color: var(--bgcCol);
+
 }
 
 /*section recommendation*/
@@ -625,13 +629,13 @@ header div.welcome h2 {
 
 .recom .background {
     height: 70vh;
-    background-color: rgba(0, 60, 50, .9);
+    background-color: var(--bgcCol);
 }
 
 /*contact section*/
 
 .contact {
-    background-color: #0E1C2C;
+    background-color: var(--menuFooterBgc);
 
 }
 
@@ -660,6 +664,11 @@ header div.welcome h2 {
     cursor: pointer;
 }
 
+.contact .wrapper-contact .phone a {
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+}
+
 .contact .wrapper-contact .address {
     margin-bottom: 20px;
 }
@@ -669,8 +678,8 @@ header div.welcome h2 {
 }
 
 .contact .wrapper-contact button:hover {
-    background-color: rgb(0, 129, 109);
-    border: 1px solid rgb(0, 129, 109);
+    background-color: var(--mainCol);
+    border: 1px solid var(--mainCol);
     opacity: 1;
 }
 
@@ -741,10 +750,10 @@ header div.welcome h2 {
 
 footer {
 
-    background-color: #0E1C2C;
+    background-color: var(--menuFooterBgc);
     color: rgba(153, 153, 153, 0.8);
     text-align: center;
-    line-height: 20px;
+    line-height: 2em;
 }
 
 /* OUTSIDE - NAVIGATION*/
@@ -813,7 +822,7 @@ aside {
     bottom: 0;
     left: -25vh;
     width: 25vh;
-    background-color: #0e1c2c;
+    background-color: var(--menuFooterBgc);
     z-index: 10;
     transition: .2s linear;
 }
@@ -1564,27 +1573,36 @@ aside .logo>strong::first-letter {
         /*contact form in section contact*/
 
         .contact label {
-            font-size: 3.5em;
+            font-size: 3em;
         }
 
         .contact .contact-form input,
         .contact .contact-form textarea {
-            font-size: 1.5em;
+            font-size: 1.3em;
+            line-height: 1.3em;
+            height: 3em;
+
+        }
+
+        .contact .contact-form input:nth-of-type(1) {
+            margin-top: 20px;
         }
 
         .contact .contact-form textarea {
-            height: 250px;
+            height: 196px;
             padding: 21px 27px;
+        }
+
+        .contact .contact-form .btnSend {
+            margin-top: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         /*footer section*/
 
         footer {
-
-            background-color: #0E1C2C;
-            color: rgba(153, 153, 153, 0.8);
-            text-align: center;
-            line-height: 20px;
+            line-height: 2em;
         }
 
         /*OUTSIDE*/
