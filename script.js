@@ -11,7 +11,7 @@ const h2Html = document.querySelector('.welcome h2');
 //array info
 const images = ['images/accountant-4008603_1280x698.jpg', 'images/accountant-3922732_1280.jpg'];
 const h1Text = ['Nie masz księgowej?', 'Ty rozwijaj firmę'];
-const h2Text = ['Usługi rachunkowo - księgowe DKB', 'ja zajmę się Twoimi fakturami'];
+const h2Text = ['Wybierz biuro rachunkowe DKB', 'ja zajmę się Twoimi fakturami'];
 
 
 function changeElement() {
@@ -108,7 +108,8 @@ burger.addEventListener('click', function () {
 $('.email').on('click', function () {
     $('.contact-form').toggleClass('active');
 
-    const goToContactForm = "[data-section=" + $(this).attr('class') + "]";
+    // const goToContactForm = "[data-section=" + $(this).attr('class') + "]";
+    const goToContactForm = $('.contact-form')
     $('body, html').animate({
         scrollTop: $(goToContactForm).offset().top
     })

@@ -453,7 +453,7 @@ header div.welcome h2 {
     font-size: 1.4em;
     text-align: center;
     font-weight: 300;
-    line-height: 23px;
+    line-height: 2.3em;
 }
 
 .service ul {
@@ -1608,8 +1608,8 @@ aside .logo>strong::first-letter {
         /*OUTSIDE*/
         /*aside logotype (base on header menu) + menu*/
         aside {
-            left: -50vh;
-            width: 50vh;
+            left: -45vh;
+            width: 45vh;
         }
 
         aside .logo>strong {
@@ -1630,7 +1630,7 @@ aside .logo>strong::first-letter {
         /*all website wrapper*/
 
         .wrap.active {
-            padding-left: 50vh;
+            padding-left: 45vh;
         }
 
     }
