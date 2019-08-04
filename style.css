@@ -746,6 +746,7 @@ header div.welcome h2 {
     border-color: rgba(0, 129, 109, 0.8);
 }
 
+
 /*footer section*/
 
 footer {
@@ -900,7 +901,23 @@ aside .logo>strong::first-letter {
     padding-left: 25vh;
 }
 
+/*toTopButton - scroll to top*/
 
+#toTopButton {
+    background-color: #fff;
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 15px;
+}
+
+#toTopButton i {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    padding: 10px;
+    color: #999;
+}
 
 
 /*MEDIA QUERIES*/

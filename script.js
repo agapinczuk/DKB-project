@@ -116,3 +116,22 @@ $('.email').on('click', function () {
 
 
 });
+
+//toTopButton
+
+const toTopButton = document.getElementById("toTopButton");
+
+window.addEventListener('scroll', function () {
+
+    const yScrollAxis = window.pageYOffset;
+
+    if (yScrollAxis > 300) {
+        toTopButton.style.display = "block";
+    } else {
+        toTopButton.style.display = "none";
+    }
+})
+
+toTopButton.addEventListener("click", function () {
+    window.scrollBy(0, -1 * window.pageYOffset);
+})
