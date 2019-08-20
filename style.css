@@ -1,11 +1,3 @@
-/*font-family: 'Oswald', sans-serif;
-font-family: 'Roboto', sans-serif;;*/
-
-/*
-font-family: 'Roboto', sans-serif;
-font-family: 'Montserrat', sans-serif;
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +5,6 @@ font-family: 'Montserrat', sans-serif;
 }
 
 html {
-    /*    font-family: 'Roboto',
-sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     /* max-width: 1280px; */
@@ -253,7 +243,9 @@ header div.welcome h2 {
     margin-bottom: 25px;
 }
 
-.bg button {
+.bg a {
+    display: inline-block;
+    width: 100%;
     top: 45%;
     right: 50%;
     width: 44%;
@@ -265,11 +257,6 @@ header div.welcome h2 {
     border: 1px solid var(--mainCol);
     opacity: 0.8;
     max-width: 310px;
-}
-
-.bg button a {
-    display: inline-block;
-    width: 100%;
     padding: 10px 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -277,23 +264,24 @@ header div.welcome h2 {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
-    /* text-align: center; */
 }
 
-.bg button a.active {
+
+.bg a.active {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.bg button:nth-last-child(1) {
+.bg a:nth-last-child(1) {
     left: 50%;
     background-color: var(--menuFooterBgc);
     border-color: var(--menuFooterBgc);
 }
 
-.bg button:hover {
+.bg a:hover {
     opacity: 1;
 }
+
 
 /*first-toggle section, second-toggle section*/
 
@@ -331,8 +319,8 @@ header div.welcome h2 {
 
 }
 
-.first-toggle #triangle-down,
-.second-toggle #triangle-down {
+.first-toggle .triangle.down,
+.second-toggle .triangle.down {
     width: 0px;
     height: 0px;
     border-left: 27px solid transparent;
@@ -341,8 +329,8 @@ header div.welcome h2 {
 
 }
 
-.first-toggle #triangle-up,
-.second-toggle #triangle-up {
+.first-toggle .triangle.up,
+.second-toggle .triangle.up {
     width: 0px;
     height: 0px;
     border-left: 27px solid transparent;
@@ -360,12 +348,12 @@ header div.welcome h2 {
 
 }
 
-.second-toggle #triangle-down {
+.second-toggle .triangle.down {
     border-top: 26px solid #fff;
     z-index: 10;
 }
 
-.second-toggle #triangle-up {
+.second-toggle .triangle.up {
     border-bottom: 26px solid #fff;
 }
 
@@ -490,7 +478,8 @@ header div.welcome h2 {
 }
 
 .service ul li:nth-child(2),
-.service ul li:nth-child(4) {
+.service ul li:nth-child(4),
+.service ul li:nth-child(6) {
     display: block;
     margin-left: 10px;
     margin-right: 10px;
@@ -499,7 +488,8 @@ header div.welcome h2 {
 
 
 .service:hover ul li:nth-child(2),
-.service:hover ul li:nth-child(4) {
+.service:hover ul li:nth-child(4),
+.service:hover ul li:nth-child(6) {
     background-color: rgba(255, 255, 255, .2);
 }
 
@@ -648,7 +638,8 @@ header div.welcome h2 {
 }
 
 
-.contact .wrapper-contact button {
+.contact .wrapper-contact button,
+.contact .wrapper-contact a {
     display: inline-block;
     width: 90%;
     background-color: transparent;
@@ -664,7 +655,7 @@ header div.welcome h2 {
     cursor: pointer;
 }
 
-.contact .wrapper-contact .phone a {
+.contact .wrapper-contact a {
     text-decoration: none;
     color: rgb(153, 153, 153);
 }
@@ -677,7 +668,8 @@ header div.welcome h2 {
     padding-right: 10px;
 }
 
-.contact .wrapper-contact button:hover {
+.contact .wrapper-contact button:hover,
+.contact .wrapper-contact a:hover {
     background-color: var(--mainCol);
     border: 1px solid var(--mainCol);
     opacity: 1;
@@ -739,6 +731,7 @@ header div.welcome h2 {
 }
 
 .contact .wrapper-contact button:focus,
+.contact .wrapper-contact a:focus,
 .contact .contact-form input:focus,
 .contact .contact-form textarea:focus,
 .contact .contact-form .btnSend:focus {
@@ -1030,7 +1023,8 @@ aside .logo>strong::first-letter {
 
     /*contact section*/
 
-    .contact .wrapper-contact button {
+    .contact .wrapper-contact button,
+    .contact .wrapper-contact a {
         font-size: 1.6em;
         line-height: 24px;
     }
@@ -1107,7 +1101,7 @@ aside .logo>strong::first-letter {
             width: 97%;
         }
 
-        .bg button {
+        .bg a {
             font-size: 1.9em;
             line-height: 1.9em;
         }
@@ -1207,7 +1201,8 @@ aside .logo>strong::first-letter {
 
         /*contact section*/
 
-        .contact .wrapper-contact button {
+        .contact .wrapper-contact button,
+        .contact .wrapper-contact a {
             font-size: 1.6em;
             line-height: 20px;
         }
@@ -1311,7 +1306,8 @@ aside .logo>strong::first-letter {
 
         /*contact section*/
 
-        .contact .wrapper-contact button {
+        .contact .wrapper-contact button,
+        .contact .wrapper-contact a {
             font-size: 1.2em;
             line-height: 18px;
         }
@@ -1423,7 +1419,7 @@ aside .logo>strong::first-letter {
             height: 20vh;
         }
 
-        .bg button {
+        .bg a {
 
             margin-right: 25px;
             margin-left: 25px;
@@ -1471,7 +1467,8 @@ aside .logo>strong::first-letter {
 
         /*contact section*/
 
-        .contact .wrapper-contact button {
+        .contact .wrapper-contact button,
+        .contact .wrapper-contact a {
             font-size: 1.8em;
             line-height: 22px;
         }
@@ -1544,7 +1541,7 @@ aside .logo>strong::first-letter {
             height: 20vh;
         }
 
-        .bg button {
+        .bg a {
 
             margin-right: 25px;
             margin-left: 25px;
@@ -1722,7 +1719,7 @@ aside .logo>strong::first-letter {
             padding-top: 0;
         }
 
-        .bg button {
+        .bg a {
             top: 0;
             right: 0;
             left: 50%;
@@ -1731,14 +1728,11 @@ aside .logo>strong::first-letter {
             margin-bottom: 0;
             margin-right: 0;
             margin-left: 0;
-        }
-
-        .bg button a {
             padding: 0;
             line-height: calc(8vh - 2px);
         }
 
-        .bg button:nth-last-child(1) {
+        .bg a:nth-last-child(1) {
             left: 100%;
             transform: translateX(-100%);
         }
@@ -1889,7 +1883,8 @@ aside .logo>strong::first-letter {
             padding: 30px 20px;
         }
 
-        .contact .wrapper-contact button {
+        .contact .wrapper-contact button,
+        .contact .wrapper-contact a {
             width: 29%;
             margin: 50px 20px;
             padding: 10px 30px;

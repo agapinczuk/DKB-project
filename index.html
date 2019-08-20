@@ -8,10 +8,8 @@
     <meta name="keywords" content="księgi rachunkowe, KPiR, Ryczałt, PIT, VAT, ZUS, Kadry, GUS">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Biuro rachunkowe Białystok</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:300,400,700&amp;subset=latin-ext"
-        rel="stylesheet">
-    <!--    /*NOTE: ściągnąć właściwie użyte fonty tylko -> sprawdzić jakie to były*/-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Roboto&amp;subset=latin-ext"
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,600,700&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -58,15 +56,16 @@
             <section class="bg clearfix">
 
                 <h3>Wspieram w prowadzeniu księgowości</h3>
-                <button><a class="show" href="#services">Usługi</a></button>
-                <button><a class="show" href="#contact"> Kontakt</a></button>
+                <a class="show" href="#services">Usługi</a>
+                <a class="show" href="#contact"> Kontakt</a>
+
             </section>
 
             <section class="first-toggle">
                 <div class="toggle">
-                    <div class="triangle" id="triangle-up"></div>
+                    <div class="triangle up"></div>
                     <h2 class="show">Jak mogę pomóc?</h2>
-                    <div class="triangle active" id="triangle-down"></div>
+                    <div class="triangle down active"></div>
                 </div>
 
             </section>
@@ -77,7 +76,8 @@
                     <div class="service">
                         <div class="iconbg"><i class="fas fa-chart-line"></i></div>
                         <h4>Księgi rachunkowe</h4>
-                        <p>Prowadzenie pełnej księgowości zgodnie z Ustawą o Rachunkowości</p>
+                        <!-- <p>Prowadzenie pełnej księgowości zgodnie z Ustawą o Rachunkowości</p> -->
+                        <p>Prowadzenie pełnej księgowości</p>
                         <ul>
                             <li>Usługi</li>
                             <li>księga główna i księgi pomocnicze</li>
@@ -105,12 +105,14 @@
                     <div class="service">
                         <div class="iconbg"><i class="fas fa-chart-pie"></i></div>
                         <h4>Podatki</h4>
-                        <p>Przygotowanie rozliczeń podatkowych i sprawozdań</p>
+                        <!-- <p>Przygotowanie rozliczeń podatkowych i sprawozdań</p> -->
+                        <p>Przygotowanie rozliczeń podatkowych</p>
                         <ul>
                             <li>Usługi</li>
                             <li>rozliczenia PIT</li>
                             <li>rozliczenia VAT</li>
-                            <li>rozliczenia ZUS, obsługa Płatnika</li>
+                            <li>rozliczenia ZUS</li>
+                            <li>obsługa Płatnika</li>
                             <li>sprawozdania do GUS</li>
                         </ul>
                     </div>
@@ -158,37 +160,35 @@
 
             <section class="second-toggle show">
                 <div class="toggleTwo">
-                    <div class="triangle" id="triangle-up"></div>
+                    <div class="triangle up"></div>
                     <h2 class="show">Skontaktuj się ze mną</h2>
-                    <div class="triangle active" id="triangle-down"></div>
+                    <div class="triangle down active"></div>
                 </div>
             </section>
 
             <section class="contact" id="contact">
                 <div class="wrapper-contact form">
-                    <button class="phone"><i class="fas fa-phone"></i><a
-                            href="tel:+48604247796">+48604247796</a></button>
+                    <a class="phone" href="tel:+48604247796"><i class="fas fa-phone"></i>+48604247796</a>
                     <button class="email"> <i class="fas fa-envelope"></i>Wyślij mi wiadomość</button>
                     <button class="address"><i class="fas fa-map-marker-alt"></i>Białystok</button>
 
-                    <form action="#">
+                    <!-- <form action="#"> -->
 
-                        <div data-section="email" class="contact-form" id="contact-form">
-                            <label for="contact-form">Napisz do mnie już dziś! </label>
-                            <input type="text" placeholder="imię">
-                            <input type="email" placeholder="adres email">
-                            <input type="tel" placeholder="numer telefonu">
-                            <textarea placeholder="Twoja wiadomość"></textarea>
-                            <!-- <textarea name="Twoja wiadomość"></textarea> -->
-                            <button class="btnSend">Wyślij</button>
-                    </form>
+                    <div data-section="email" class="contact-form">
+                        <label for="contact-form">Napisz do mnie już dziś! </label>
+                        <input type="text" id="contact-form" placeholder="imię">
+                        <input type="email" placeholder="adres email">
+                        <input type="tel" placeholder="numer telefonu">
+                        <textarea placeholder="Twoja wiadomość"></textarea>
+                        <button class="btnSend">Wyślij</button>
+                        <!-- </form> -->
+                    </div>
                 </div>
             </section>
         </main>
         <footer>&copy; 2019. AgaPinczuk.pl</footer>
     </div>
 
-    </div>
     <div class="burger show">
         <span></span>
         <span></span>
